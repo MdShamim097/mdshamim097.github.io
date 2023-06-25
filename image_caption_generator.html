@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" href="img/favicon.png" type="image/png">
+	<title>Shamim097 Portfolio</title>
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="vendors/linericon/style.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+
+	<!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+	<!-- main css -->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+	<!--================ Start Header Area =================-->
+	<header class="header_area">
+		<div class="main_menu">
+			<nav class="navbar navbar-expand-lg navbar-light">
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<!-- <a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt=""></a> -->
+					<a href="index.html" class="navbar-brand ml-lg-3">
+						<h1 class="m-0 display-5"><span class="text-primary">Shamim</span><sup>097</sup></h1>
+					</a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+						<ul class="nav navbar-nav menu_nav justify-content-end">
+							<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+							<!-- <li class="nav-item"><a class="nav-link" href="about.html">About</a></li> -->
+							<li class="nav-item"><a class="nav-link" href="quality.html">Quality</a></li>
+							<li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
+							<li class="nav-item"><a class="nav-link" href="publication.html">Publication</a></li>
+							<li class="nav-item active"><a class="nav-link" href="project.html">Project</a></li>
+							<li class="nav-item"><a class="nav-link" href="assignment.html">Assignment</a></li>
+							<li class="nav-item"><a class="nav-link" href="skill.html">Skill</a></li>
+							<li class="nav-item"><a class="nav-link" href="acheivement.html">Acheivement</a></li>
+							<!-- <li class="nav-item submenu dropdown">
+								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+								 aria-expanded="false">Pages</a>
+								<ul class="dropdown-menu">
+									<li class="nav-item"><a class="nav-link" href="elements.html">Elements</a></li>
+									<li class="nav-item"><a class="nav-link" href="portfolio-details.html">Portfolio Details</a></li>
+								</ul>
+							</li>
+							<li class="nav-item submenu dropdown">
+								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+								 aria-expanded="false">Blog</a>
+								<ul class="dropdown-menu">
+									<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+									<li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>
+								</ul>
+							</li> -->
+							<!-- <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li> -->
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<!--================ End Header Area =================-->
+
+ <!--================Start Portfolio Area =================-->
+ <section class="section_gap">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+                <div class="position-relative d-flex align-items-center justify-content-center" style="margin-bottom: 2cm;">
+                    <h1 class="position-absolute text-uppercase" style="color: black;">Image Caption Generator</h1>
+                </div>
+                <div>
+                    <h2>Description</h2>
+					<ul>
+						<li>Recognized the context of an image and annotated it with relevant captions using deep learning and computer
+							vision.</li>
+						<li>CNN was used to generate a vectorized representation of an image. </li>
+						<li>Then, LSTM used the information from CNN to help generate a caption of the image.</li>
+						<li>Implemented Greedy and Beam search strategies.</li>
+						<li>Evaluated our architecture using BLEU and METEOR metrics.</li>
+					</ul>
+                </div>
+				<br/>
+				<div>
+					<h2>Architecture</h2>
+					<br/><img src="img/projects/image_caption_generator.png" style="width: 45vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
+				</div>
+				<br/>
+				<div>
+                    <h2>Dataset Used</h2>
+					<p>Flickr_8k dataset</p>
+					<ul>
+						<li>Training images: 6000</li>
+						<li>Validation images: 1000</li>
+						<li>Testing images: 1000</li>
+					</ul>
+                </div>
+				<br/>
+				<div>
+                    <h2>Python Library Used</h2>
+					<ul>
+						<li>keras.applications</li>
+						<li>keras.utils </li>
+						<li>tqdm</li>
+						<li>keras.models</li>
+						<li>keras.layers</li>
+						<li>keras.preprocessing.text</li>
+						<li>numpy</li>
+						<li>matplotlib.pyplot</li>
+						<li>nltk.translate.bleu_score</li>
+						<li>nltk.translate.meteor_score</li>
+						<li>nltk.corpus</li>
+						<li>pickle</li>
+					</ul>
+                </div>
+				<br/>
+				<div>
+					<h2>Scores</h2>
+					# Evaluation results of all test images with Greedy Search <br/>
+					BLEU-1 using greedy search: 42.2462	<br/>
+					BLEU-2 using greedy search: 24.5350	<br/>
+					Meteor score using greedy search: 23.2535	<br/> <br/>
+					# Evaluation results of all test images with Beam Search (k=3)	<br/>
+					BLEU-1 using beam search: 42.3408	<br/>
+					BLEU-2 using beam search: 25.5814	<br/>
+					Meteor score using beam search: 24.0130	<br/> <br/><br/>
+					<img src="img/projects/image_caption_generator/BLEU.png" style="width: 45vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
+				</div>
+				<br/>
+				<div>
+					<h2>Independent Test Results</h2>
+					<br/>
+					<img src="img/projects//image_caption_generator/doctor.jpg" alt="">&emsp;&emsp;&nbsp;
+					<img src="img/projects//image_caption_generator/t1.png" style="width: 500px; height: 85px;" alt=""> <br/><br/>
+					<img src="img/projects//image_caption_generator/dog.jpg" alt=""> &emsp;&emsp;&nbsp;
+					<img src="img/projects//image_caption_generator/t2.png" style="width: 500px; height: 85px;" alt=""> <br/><br/>
+					<img src="img/projects//image_caption_generator/my_pic.jpg" style="width: 250px; height: 325px;" alt=""> &emsp;&emsp;&nbsp;
+					<img src="img/projects//image_caption_generator/t3.png" style="width: 500px; height: 80px;" alt=""> <br/><br/>
+				</div>
+				<br/>
+				<div>
+					<h2>Code</h2>
+					<a href="https://github.com/MdShamim097/Image-Caption-Generator"><u style="color: blue;">Github</u></a>
+				</div>
+            </div>
+            
+        </div>
+
+    </div>
+</section>
+<!--================End Portfolio Area =================-->
+
+	<!--================Footer Area =================-->
+	<footer class="footer_area">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-12">
+					<div class="footer_top flex-column">
+						<div class="footer_logo">
+							<a href="#">
+								<img src="img/logo.png" alt="">
+							</a>
+							<h4>Follow Me</h4>
+						</div>
+						<!-- <div class="footer_social">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-dribbble"></i></a>
+							<a href="#"><i class="fa fa-behance"></i></a>
+						</div> -->
+						<div class="d-flex justify-content-center mb-4">
+							<a class="btn btn-light btn-social mr-2" style="background-color: rgb(186, 186, 199);" href="https://www.facebook.com/mohammadshamim.ahsan/"><i class="fab fa-facebook-f"></i></a>
+							<a class="btn btn-light btn-social mr-2" style="background-color: rgb(186, 186, 199);" href="http://linkedin.com/in/mohammad-shamim-ahsan"><i class="fab fa-linkedin-in"></i></a>
+							<a class="btn btn-light btn-social" style="background-color: rgb(186, 186, 199);" href="https://github.com/MdShamim097"><i class="fab fa-github"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row footer_bottom justify-content-center">
+				<p class="col-lg-8 col-sm-12 footer-text">
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		</div>
+	</footer>
+	<!--================End Footer Area =================-->
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/popper.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/stellar.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
+	<script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
+	<script src="vendors/isotope/isotope-min.js"></script>
+	<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+	<script src="js/jquery.ajaxchimp.min.js"></script>
+	<script src="js/mail-script.js"></script>
+	<!--gmaps Js-->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+	<script src="js/gmaps.min.js"></script>
+	<script src="js/theme.js"></script>
+
+	 <!-- Template Javascript
+	 <script src="js/main.js"></script> -->
+</body>
+
+</html>

@@ -1,0 +1,406 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" href="img/favicon.png" type="image/png">
+	<title>Shamim097 Portfolio</title>
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="vendors/linericon/style.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+
+	<!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+	<!-- main css -->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+	<!--================ Start Header Area =================-->
+	<header class="header_area">
+		<div class="main_menu">
+			<nav class="navbar navbar-expand-lg navbar-light">
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<!-- <a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt=""></a> -->
+					<a href="index.html" class="navbar-brand ml-lg-3">
+						<h1 class="m-0 display-5"><span class="text-primary">Shamim</span><sup>097</sup></h1>
+					</a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+						<ul class="nav navbar-nav menu_nav justify-content-end">
+							<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+							<!-- <li class="nav-item"><a class="nav-link" href="about.html">About</a></li> -->
+							<li class="nav-item"><a class="nav-link" href="quality.html">Quality</a></li>
+							<li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
+							<li class="nav-item"><a class="nav-link" href="publication.html">Publication</a></li>
+							<li class="nav-item active"><a class="nav-link" href="project.html">Project</a></li>
+							<li class="nav-item"><a class="nav-link" href="assignment.html">Assignment</a></li>
+							<li class="nav-item"><a class="nav-link" href="skill.html">Skill</a></li>
+							<li class="nav-item"><a class="nav-link" href="acheivement.html">Acheivement</a></li>
+							<!-- <li class="nav-item submenu dropdown">
+								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+								 aria-expanded="false">Pages</a>
+								<ul class="dropdown-menu">
+									<li class="nav-item"><a class="nav-link" href="elements.html">Elements</a></li>
+									<li class="nav-item"><a class="nav-link" href="portfolio-details.html">Portfolio Details</a></li>
+								</ul>
+							</li>
+							<li class="nav-item submenu dropdown">
+								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+								 aria-expanded="false">Blog</a>
+								<ul class="dropdown-menu">
+									<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+									<li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>
+								</ul>
+							</li> -->
+							<!-- <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li> -->
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<!--================ End Header Area =================-->
+
+ <!--================Start Portfolio Area =================-->
+ <section class="portfolio_area section_gap" id="portfolio">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+                <!-- <div class="main_title text-center">
+                    <h1 class="display-1 text-uppercase text-white" style="-webkit-text-stroke: 1px #dee2e6;">Projects</h1>
+                    <h2 class="position-absolute text-uppercase text-primary">Academic Projects </h2>
+                </div> -->
+                <div class="position-relative d-flex align-items-center justify-content-center" style="margin-bottom: 2cm;">
+                    <h1 class="position-absolute text-uppercase" style="color: black;">TCP CERL: congestion control enhancement over wireless networks </h1>
+                </div>
+                <div>
+                    <h2>At A Galance</h2>
+					<p>
+						<ul>
+							<li>Studied the TCP-CERL technique for enhancement of congestion control which is the sender-side modi- fication
+								of TCP-Reno.</li>
+							<li>Implemented this technique in NS3. The implementation that the authors of the paper did was in NS2.</li>
+							<li>Tested on two wireless networks: Wi-Fi and LR-WPAN. </li>
+							<li>Calculated various performance metrics such as throughput, end-to-end delay time, delivery-ratio and loss-ratio.</li>
+						</ul>
+					</p>
+                </div>
+				<br/>
+				<div>
+					<h2>Idea</h2>
+					<p>
+						TCP CERL is a sender-side modification of TCP Reno.     
+						The key idea behind CERL is to use the RTT measurements made throughout the duration of the connection to estimate the 
+						queue length of the bottleneck router and then estimates the congestion status. By distinguishing random losses from congestion losses 
+						based on a dynamically set threshold value, TCP CERL successfully attacks the well-known performance degradation issue of TCP over 
+						channels subject to random losses.
+					</p>
+				</div>
+				<br/>
+				<div>
+					<h2>Formulas</h2>
+					<ul>
+						<li>Calculation of Bottleneck Queue Length: <br/> 
+						<ul>
+						<li>L = (RTT– BaseRTT) * Bandwidth</li>
+						<li>Bandwidth = congestion window / RTT</li>
+						</ul>
+						</li>
+						<li>
+							Calculation of Dynamic Queue Length Threshold:<br/> 
+							&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; N = A * L_max ( A = constant) 
+						</li>
+					</ul>
+				</div>
+				<br/>
+				<div>
+					<h2>Fast Recovery & Fast Retransmit</h2>
+					<ul>
+						<li>3 Dup Ack received</li>
+						<li>Check L<N</li>
+						<ul>
+							<li>True → Random Loss</li>
+							<li>False→Congestion Loss</li>
+						</ul>
+						<li>Implementation of separate losses according to TCP CERL</li>
+					</ul>
+				</div>
+				<br/>
+				<div>
+					<h2>Retransmit Timeout</h2>
+					<p>Same as TCP Reno</p>
+				</div>
+				<br/>
+				<div>
+					<h2>Simulation Tool</h2>
+					<b style="color: rgb(89, 89, 132);">Network Simulator v3 (NS3)</b>
+				</div>
+				<br/>
+				<div>
+					<h2>Netwroks</h2>
+					<ul>
+						<li>Wireless high-rate (e.g., 802.11) (mobile) --- Wi-Fi</li>
+						<li>Wireless low-rate (e.g., 802.15.4) (mobile) --- LR-WPAN</li>
+					</ul>
+				</div>
+				<br/>
+				<div>
+					<h2>Network topologies under simulation</h2>
+					<p>In this project, “Ad-hoc” topology is used. It is a wireless topology
+						where devices are connected without using any additional network
+						infrastructure devices like a wireless access point.</p>
+					<br/><img src="img/projects/tcp_cerl/adhoc.png" style="width: 29vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
+				</div>
+				<br/>
+				<div>
+					<h2>Parameter under variation</h2>
+					<ol>
+						<li>Number of nodes (e.g., 30, 60, 100)</li>
+						<li>Speed of nodes (as both network needs mobility) (e.g., 5 m/s,15 m/s, 25 m/s)</li>
+					</ol>
+				</div>
+				<br/>
+				<div>
+					<h2>Overview of TCP CERL algorithm</h2>
+					<ul>
+						<li>Step-1: Calculating the bottleneck queue length(L)</li>
+						<li>Step-2: Calculating the dynamic queue length threshold(N)</li>
+						<li>Step-3: Each time a new RTT is received, values of T, L, L_max, N are updated.</li>
+						<li>Step-4: Slow start and congestion avoidance is same as Reno.</li>
+						<li>When 3 duplicate acknowledgements are received,
+							<ol>
+								<li>If L < N, CERL will assume this segment loss is “random
+									loss” rather than congestion loss. The lost segment will be retransmitted, but the congestion window and slow
+									start threshold will not be reduced.</li>
+								<li>Otherwise, CERL will assume the loss is caused by
+									congestion, and the congestion window and slow start
+									threshold will be reduced as in Reno. However, multiple
+									segment losses in one window of data will only reduce
+									the congestion window once.</li>
+									<br/><br/><img src="img/projects/tcp_cerl/algo1.png" style="width: 25vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
+							</ol>
+						</li>
+						<li>Step-5: Small modification in fast recovery algorithm code that
+							handles window deflation.</li>
+							<br/><br/><img src="img/projects/tcp_cerl/algo2.png" style="width: 11vw; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
+					</ul>
+				</div>
+				<br/>
+				<div>
+					<h2>Modifications made in the simulator</h2>
+					<p>
+						As ns-3.35 uses tcp-newreno as root of all tcp congestion algorithm,
+tcp-cerl has been developed using tcp-newreno as basement. <br/>
+						<ul>
+							<li>First of all, two new files – “tcp-cerl.h” and “tcp-cerl.cc” are added in the “/ns-3.35/src/internet/model” folder.</li>
+							<li>Secondly, four new files – “wifi-tcp-reno.cc”, “wifi-tcp-cerl.cc”,
+								“lrwpan-reno.cc” and “lrwpan-cerl.cc” are added in the “/ns-
+								3.35/scratch” folder.</li>
+							<li>Thirdly, two new variables are added in the ‘TcpSocketState’ class in
+								“/ns-3.35/src/internet/model/tcp-socket-state.h” file.</li>
+							<li>Fourthly, a small modification has been done in the
+								‘TcpSocketBase::EnterRecovery()’ function in “/ns-
+								3.35/src/internet/model/tcp-socket-base.cc” file.</li>
+							<li>Last of all, but most importantly, to build CERL 'model/tcp-cerl.cc' is
+								added in the “def build(bid)” method in “/ns-
+								3.35/src/internet/wscript” file and “tcp-cerl.h” is added in “/ns-
+								3.35/build/ns3” folder. A variable is made public in "ns-3.35/src/internet/model/tcp-socket-base.h" file.</li>
+						</ul>
+					</p>
+				</div>
+				<br/>
+				<div>
+					<h2>Results & Comparison with graphs</h2>
+					<p>
+						To compare <b style="color: rgb(89, 89, 132);">TCP CERL</b> with <b style="color: rgb(89, 89, 132);">TCP NewReno</b>, three performance 
+metrics (<b style="color: rgb(89, 89, 132);">throughput, end-to-end-delay & packet-delivery ratio</b>) are 
+measured varying two parameters (<b style="color: rgb(89, 89, 132);">Number of nodes & speed of nodes</b>). 
+The comparison is showed below using graphs.
+					</p>
+					<!-- <h3><i>(Task A has been conducted with TCP New-Reno)</i></h3> -->
+					<h4>For Wireless high-rate (e.g., 802.11) (mobile) --- Wi-Fi</h4>
+					<ol>
+						<li>Varying number of nodes:
+							<ol>
+								<li> Number of nodes=30</li>
+								<br/><img src="img/projects/tcp_cerl/a_1_1.png" style="width: 45vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
+								<br/><img src="img/projects/tcp_cerl/a_1_1_2.png" style="width: 45vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
+								<li>Number of nodes=60</li>
+								<br/><img src="img/projects/tcp_cerl/a_1_2_1.png" style="width: 45vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
+								<br/><img src="img/projects/tcp_cerl/a_1_2_2.png" style="width: 45vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
+								<li>Number of nodes=100</li>
+								<br/><img src="img/projects/tcp_cerl/a_1_3.png" style="width: 45vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
+								<br/><img src="img/projects/tcp_cerl/a_1_3_2.png" style="width: 45vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
+							</ol>
+						</li>
+						<li>Varying speed of nodes:
+							<ol>
+								<li>Speed of nodes=5 m/s</li>
+								<br/><img src="img/projects/tcp_cerl/a_2_1_1.PNG" style="width: 45vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
+								<br/><img src="img/projects/tcp_cerl/a_2_1_2.png" style="width: 45vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
+								<li>Speed of nodes=15 m/s</li>
+								<br/><img src="img/projects/tcp_cerl/a_2_2.png" style="width: 45vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
+								<br/><img src="img/projects/tcp_cerl/a_2_2_2.png" style="width: 45vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
+								<li>Speed of nodes=25 m/s</li>
+								<br/><img src="img/projects/tcp_cerl/a_2_3.png" style="width: 45vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
+								<br/><img src="img/projects/tcp_cerl/a_2_3_2.png" style="width: 45vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
+							</ol>
+						</li>
+					</ol>
+					
+					<h4>For Wireless low-rate (e.g., 802.15.4) (mobile) --- LR-WPAN</h4>
+					<ol>
+						<li>Varying number of nodes:
+							<ol>
+								<li> Number of nodes=30</li>
+								<br/><img src="img/projects/tcp_cerl/a_3_1.png" style="width: 45vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
+								<br/><img src="img/projects/tcp_cerl/a_3_1_2.png" style="width: 45vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
+								<li>Number of nodes=60</li>
+								<br/><img src="img/projects/tcp_cerl/a_3_2.png" style="width: 45vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
+								<br/><img src="img/projects/tcp_cerl/a_3_2_2.png" style="width: 45vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
+								<li>Number of nodes=100</li>
+								<br/><img src="img/projects/tcp_cerl/a_3_3_1.png" style="width: 45vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
+								<br/><img src="img/projects/tcp_cerl/a_3_3_2.png" style="width: 45vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
+							</ol>
+						</li>
+						<li>Varying speed of nodes:
+							<ol>
+								<li>Speed of nodes=5 m/s</li>
+								<br/><img src="img/projects/tcp_cerl/a_4_1.png" style="width: 45vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
+								<br/><img src="img/projects/tcp_cerl/a_4_1_2.png" style="width: 45vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
+								<li>Speed of nodes=15 m/s</li>
+								<br/><img src="img/projects/tcp_cerl/a_4_2.png" style="width: 45vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
+								<br/><img src="img/projects/tcp_cerl/a_4_2_2.png" style="width: 45vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
+								<li>Speed of nodes=25 m/s</li>
+								<br/><img src="img/projects/tcp_cerl/a_4_3.png" style="width: 45vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
+								<br/><img src="img/projects/tcp_cerl/a_4_3_2.png" style="width: 45vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
+							</ol>
+						</li>
+					</ol>
+				</div>
+				<br/>
+				<div>
+					<h2>Explanation of results and Comparison with TCP-NewReno</h2>
+					<p>
+						For the Wi-Fi network, we can see that when number of nodes 
+						increases, CERL gives better throughput than NewReno. End-to-end 
+						delay slightly differs. But delivery-ratio is much better for CERL. 
+						When increasing speed of nodes, throughput & delivery-ratio 
+						becomes surprisingly higher than New-Reno, though it takes much 
+						time. </p>
+						<p>For the LR-WPAN network, it’s clear that when number of nodes 
+						increases, at first CERL gives better throughput than NewReno but 
+						gradually it becomes almost same. End-to-end delay slightly differs 
+						like in Wi-Fi. But delivery-ratio is same or sometimes better for CERL. 
+						When increasing speed of nodes, throughput & delivery-ratio 
+						becomes better than New-Reno, but not as much in previous Wi-Fi 
+						network. As expected from observation, CERL takes relatively far 
+						more time than NewReno.</p>
+				</div>
+				<br/>
+				<div>
+					<h2>Comparing results with Paper</h2>
+					<p>
+						In the paper, the researcher claims (at section 5 Conclusion, page-15) 
+						that TCP CERL is able to achieve excellent throughput gain than newreno. The results and observations, stated above, 
+						completely agree with their claim. Further, this project depicts that 
+						CERL gives far better performance in delivery-ratio also. But it’s true 
+						that CERL takes much time for transmitting packets.
+					</p>
+				</div>
+				<br/>
+				<div>
+					<h2></h2>
+					<p>
+						
+					</p>
+				</div>
+				<br/>
+				<div>
+					<h2>REFERENCE PAPER</h2>
+					<a href="https://link.springer.com/article/10.1007/s11276-008-0123-4">“TCP CERL: congestion control enhancement over wireless networks”</a>
+				</div>
+            </div>
+            
+        </div>
+
+    </div>
+</section>
+<!--================End Portfolio Area =================-->
+
+	<!--================Footer Area =================-->
+	<footer class="footer_area">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-12">
+					<div class="footer_top flex-column">
+						<div class="footer_logo">
+							<a href="#">
+								<img src="img/logo.png" alt="">
+							</a>
+							<h4>Follow Me</h4>
+						</div>
+						<!-- <div class="footer_social">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-dribbble"></i></a>
+							<a href="#"><i class="fa fa-behance"></i></a>
+						</div> -->
+						<div class="d-flex justify-content-center mb-4">
+							<a class="btn btn-light btn-social mr-2" style="background-color: rgb(186, 186, 199);" href="https://www.facebook.com/mohammadshamim.ahsan/"><i class="fab fa-facebook-f"></i></a>
+							<a class="btn btn-light btn-social mr-2" style="background-color: rgb(186, 186, 199);" href="http://linkedin.com/in/mohammad-shamim-ahsan"><i class="fab fa-linkedin-in"></i></a>
+							<a class="btn btn-light btn-social" style="background-color: rgb(186, 186, 199);" href="https://github.com/MdShamim097"><i class="fab fa-github"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row footer_bottom justify-content-center">
+				<p class="col-lg-8 col-sm-12 footer-text">
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		</div>
+	</footer>
+	<!--================End Footer Area =================-->
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/popper.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/stellar.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
+	<script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
+	<script src="vendors/isotope/isotope-min.js"></script>
+	<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+	<script src="js/jquery.ajaxchimp.min.js"></script>
+	<script src="js/mail-script.js"></script>
+	<!--gmaps Js-->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+	<script src="js/gmaps.min.js"></script>
+	<script src="js/theme.js"></script>
+
+	 <!-- Template Javascript
+	 <script src="js/main.js"></script> -->
+</body>
+
+</html>

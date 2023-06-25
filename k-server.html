@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" href="img/favicon.png" type="image/png">
+	<title>Shamim097 Portfolio</title>
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="vendors/linericon/style.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+
+	<!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+	<!-- main css -->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+	<!--================ Start Header Area =================-->
+	<header class="header_area">
+		<div class="main_menu">
+			<nav class="navbar navbar-expand-lg navbar-light">
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<!-- <a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt=""></a> -->
+					<a href="index.html" class="navbar-brand ml-lg-3">
+						<h1 class="m-0 display-5"><span class="text-primary">Shamim</span><sup>097</sup></h1>
+					</a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+						<ul class="nav navbar-nav menu_nav justify-content-end">
+							<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+							<!-- <li class="nav-item"><a class="nav-link" href="about.html">About</a></li> -->
+							<li class="nav-item"><a class="nav-link" href="quality.html">Quality</a></li>
+							<li class="nav-item active"><a class="nav-link" href="research.html">Research</a></li>
+							<li class="nav-item"><a class="nav-link" href="publication.html">Publication</a></li>
+							<li class="nav-item"><a class="nav-link" href="project.html">Project</a></li>
+							<li class="nav-item"><a class="nav-link" href="assignment.html">Assignment</a></li>
+							<li class="nav-item"><a class="nav-link" href="skill.html">Skill</a></li>
+							<li class="nav-item"><a class="nav-link" href="acheivement.html">Acheivement</a></li>
+							<!-- <li class="nav-item submenu dropdown">
+								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+								 aria-expanded="false">Pages</a>
+								<ul class="dropdown-menu">
+									<li class="nav-item"><a class="nav-link" href="elements.html">Elements</a></li>
+									<li class="nav-item"><a class="nav-link" href="portfolio-details.html">Portfolio Details</a></li>
+								</ul>
+							</li>
+							<li class="nav-item submenu dropdown">
+								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+								 aria-expanded="false">Blog</a>
+								<ul class="dropdown-menu">
+									<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+									<li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>
+								</ul>
+							</li> -->
+							<!-- <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li> -->
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<!--================ End Header Area =================-->
+
+    <!--================ Start Features Area =================-->
+	<section class="section_gap">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-8 text-center">
+					<div class="position-relative d-flex align-items-center justify-content-center" style="margin-bottom: 2cm;">
+						<h1 class="position-absolute text-uppercase" style="color: black;">Randomization in Double Coverage Algorithm on a Line for Online <i>k</i>-Server problem</h1>
+					</div>
+				</div>
+			</div>
+			<div class="row feature_inner">
+                <div>
+                    <h2>Objective</h2>
+                    In the online <i>k</i>-server problem there is a set of <i>k</i> servers, represented as points in a metric space, to
+                    handle requests that are also in the form of points in the space and appear one after another. For each request,
+                    the algorithm must determine which server to move to the requested point. If the servers and the requests lie on
+                    a line we call the problem online <i>k</i>-server problem on a line. The goal is to minimize the total distance traveled
+                    by the servers for serving a sequence of requests.  
+                    <br/><br/><img src="img/researches/r2/intro.png"  style="width: 39vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" alt=""> <br/>
+                </div>
+                <br/>
+                <div>
+                    <h2>Double Coverage Algorithm for Line</h2>
+                    A very elegant online algorithm for the line
+                    is the Double Coverage Algorithm by Chrobak et. al. It is like the Greedy Algorithm which always moves
+                    the closest server to the request. Instead, the Double Coverage Algorithm moves usually
+                    the two closest servers toward the request. In particular, when the request is between two
+                    servers (inside the “convex hull"), the algorithm moves both servers towards the request; the
+                    servers travel the same distance, equal to the distance of the request to the closest of the
+                    two servers until (at least) one server reaches it (If two servers occupy the same point, then
+                    choose one arbitrarily). When the request falls outside the “convex hull" of the k servers,
+                    only the closest server moves to it.
+                </div>
+                <br/>
+                <div>
+                    <h2>Methodology</h2>
+                    We develop two randomized variants of the Double Coverage (DC)-Line algorithm: RAND &
+                    SEMI-RAND. 
+                    <div>
+                        <h3><i>RAND</i></h3>
+                        If the current request lies outside the convex hull of the current locations of the servers, RAND
+                        serves it with the nearest server.
+                        <br/><img src="img/researches/r2/img-1.png" style="width: 45vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" alt=""> <br/>
+                        Otherwise, it randomly chooses one of the adjacent servers and moves it toward
+                        the request.
+                        <br/><img src="img/researches/r2/img-2.png" style="width: 45vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" alt=""> <br/>
+                    </div>
+                    <h3><i>SEMI-RAND</i></h3>
+                    SEMI-RAND works more efficiently. Initially, we keep two splitters for each pair of adjacent servers between
+                    their paths. If the current request lies outside the convex hull of the current locations of the servers, serve it with the nearest
+                    one. Otherwise, 
+                        <ol>
+                            <li>If the request is at the left side of splitter-1 (inclusive), serve it with the left server among its adjacent 
+                                two servers.
+                                <br/><img src="img/researches/r2/img-13.png" style="width: 45vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" alt=""> <br/>
+                            </li>
+                            <li>If the request is at the right side of splitter-2 (inclusive), serve it with the right server among its
+                                adjacent two servers.
+                                <br/><img src="img/researches/r2/img-14.png" style="width: 45vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" alt=""> <br/>
+                            </li>
+                            <li>
+                                If the request is in between splitter-1 and splitter-2, choose randomly any of the
+                                adjacent servers and serve the request with it. 
+                                <br/><img src="img/researches/r2/img-15.png" style="width: 45vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" alt="">
+                                <img src="img/researches/r2/img-16.png" style="width: 45vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" alt=""> <br/>
+                            </li>
+                        </ol>
+                </div>
+                <br/>
+                <div>
+                    <h2>Results Summary</h2>
+                    We show that the probabilities of RAND and SEMI-RAND of being <i>k</i>-competitive are 1/2 and 5/6,
+                    respectively using interleaving move style. It is known that the competitive ratio of any randomized algorithm
+                    for the online <i>k</i>-server problem is at least <i>k</i> (Motwani & Raghavan, pp. 368–391, 1995) and hence our algorithm
+                    matches the lower bound. Apart from competitive analysis, we perform a cost comparison between the original
+                    DC-Line algorithm and our algorithms. Our results and analysis prove that RAND takes less cost except for one
+                    case and SEMI-RAND always requires less cost than the original DC-Line algorithm which shows the power of
+                    randomization in an online algorithm working against an adaptive online adversary. Using that cost analysis we
+                    show that SEMI-RAND is no worse than DC-Line in terms of competitive ratio.
+                </div>
+                <br/>
+                <div>
+                    <h2>Contributions</h2>
+                    In this paper, we have worked on the randomization in the Double Coverage Algorithm on
+                    a line (DC-Line) for the online <i>k</i>-server problem. As no work has been done before on the
+                    power of randomization in the DC-Line algorithm, our work makes an important contribution
+                    to this problem. We develop two randomized variants of the DC-Line algorithm which are
+                    proved as <i>k</i>-competitive with probability 1/2 and 5/6. According to <i>Lemma1</i>, our results match
+                    with the known lower bound on competitive ratio with probabilities mentioned below. To
+                    the best of our knowledge, among the recent works of randomized algorithms for the online
+                    <i>k</i>-server problem on a line, the algorithm provided by Csaba and Lodha gives super-linear
+                    bound for n with o(<i>k</i>)–competitiveness for the first time. But their algorithm works against
+                    “oblivious adversary” which is weaker than “adaptive online adversary” (described in Section
+                    2) against which we have worked on. <br/>
+                    <b style="color: rgba(0, 0, 0, 0.774);">Lemma1:
+                        Let R be a randomized online algorithm that manages k servers in any
+                        metric space. Then C<sup style="color: rgba(0, 0, 0, 0.774);">aon</sup> R ≥ k, where 
+                        C<sup style="color: rgba(0, 0, 0, 0.774);">aon</sup> <sub style="color: rgba(0, 0, 0, 0.774);">R</sub> 
+                        is the competitive ratio of that randomized
+                        algorithm that moves against any adaptive online adversary.
+                    </b>
+                </div>
+			</div>
+		</div>
+	</section>
+	<!--================ End Features Area =================-->
+
+	<!--================Footer Area =================-->
+	<footer class="footer_area">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-12">
+					<div class="footer_top flex-column">
+						<div class="footer_logo">
+							<a href="#">
+								<img src="img/logo.png" alt="">
+							</a>
+							<h4>Follow Me</h4>
+						</div>
+						<!-- <div class="footer_social">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-dribbble"></i></a>
+							<a href="#"><i class="fa fa-behance"></i></a>
+						</div> -->
+						<div class="d-flex justify-content-center mb-4">
+							<a class="btn btn-light btn-social mr-2" style="background-color: rgb(186, 186, 199);" href="https://www.facebook.com/mohammadshamim.ahsan/"><i class="fab fa-facebook-f"></i></a>
+							<a class="btn btn-light btn-social mr-2" style="background-color: rgb(186, 186, 199);" href="http://linkedin.com/in/mohammad-shamim-ahsan"><i class="fab fa-linkedin-in"></i></a>
+							<a class="btn btn-light btn-social" style="background-color: rgb(186, 186, 199);" href="https://github.com/MdShamim097"><i class="fab fa-github"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row footer_bottom justify-content-center">
+				<p class="col-lg-8 col-sm-12 footer-text">
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		</div>
+	</footer>
+	<!--================End Footer Area =================-->
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/popper.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/stellar.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
+	<script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
+	<script src="vendors/isotope/isotope-min.js"></script>
+	<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+	<script src="js/jquery.ajaxchimp.min.js"></script>
+	<script src="js/mail-script.js"></script>
+	<!--gmaps Js-->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+	<script src="js/gmaps.min.js"></script>
+	<script src="js/theme.js"></script>
+
+	 <!-- Template Javascript
+	 <script src="js/main.js"></script> -->
+</body>
+
+</html>

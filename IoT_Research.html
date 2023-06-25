@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="icon" href="img/favicon.png" type="image/png">
+	<title>Shamim097 Portfolio</title>
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="vendors/linericon/style.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+
+	<!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+	<!-- main css -->
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+	<!--================ Start Header Area =================-->
+	<header class="header_area">
+		<div class="main_menu">
+			<nav class="navbar navbar-expand-lg navbar-light">
+				<div class="container">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<!-- <a class="navbar-brand logo_h" href="index.html"><img src="img/logo.png" alt=""></a> -->
+					<a href="index.html" class="navbar-brand ml-lg-3">
+						<h1 class="m-0 display-5"><span class="text-primary">Shamim</span><sup>097</sup></h1>
+					</a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+						<ul class="nav navbar-nav menu_nav justify-content-end">
+							<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+							<!-- <li class="nav-item"><a class="nav-link" href="about.html">About</a></li> -->
+							<li class="nav-item"><a class="nav-link" href="quality.html">Quality</a></li>
+							<li class="nav-item active"><a class="nav-link" href="research.html">Research</a></li>
+							<li class="nav-item"><a class="nav-link" href="publication.html">Publication</a></li>
+							<li class="nav-item"><a class="nav-link" href="project.html">Project</a></li>
+							<li class="nav-item"><a class="nav-link" href="assignment.html">Assignment</a></li>
+							<li class="nav-item"><a class="nav-link" href="skill.html">Skill</a></li>
+							<li class="nav-item"><a class="nav-link" href="acheivement.html">Acheivement</a></li>
+							<!-- <li class="nav-item submenu dropdown">
+								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+								 aria-expanded="false">Pages</a>
+								<ul class="dropdown-menu">
+									<li class="nav-item"><a class="nav-link" href="elements.html">Elements</a></li>
+									<li class="nav-item"><a class="nav-link" href="portfolio-details.html">Portfolio Details</a></li>
+								</ul>
+							</li>
+							<li class="nav-item submenu dropdown">
+								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+								 aria-expanded="false">Blog</a>
+								<ul class="dropdown-menu">
+									<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+									<li class="nav-item"><a class="nav-link" href="single-blog.html">Blog Details</a></li>
+								</ul>
+							</li> -->
+							<!-- <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li> -->
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<!--================ End Header Area =================-->
+
+    <!--================ Start Features Area =================-->
+	<section class="section_gap">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-8 text-center">
+					<div class="position-relative d-flex align-items-center justify-content-center" style="margin-bottom: 2cm;">
+						<h1 class="position-absolute text-uppercase" style="color: black;">Detecting User Activity from Encrypted IoT Traffic</h1>
+					</div>
+				</div>
+			</div>
+			<div class="row feature_inner">
+				<div>
+					<h2>Abstract</h2>
+					<p>
+						Despite the significant benefits brought by the widespread adoption of smart home Internet of Things (IoT) devices, these devices are known to be vulnerable to both active
+						and passive attacks. Previous research has demonstrated the ability to infer the activities of these devices and sensors by
+						analyzing their network traffic. In this study, we introduce a packet-based signature that can identify specific events associated
+						with IoT devices by extracting various features from raw network traffic. Our approach addresses limitations in existing state of-the-art techniques, which rely on specific packet intervals.
+						Furthermore, we evaluate the effectiveness and uniqueness of our signatures by training and testing our system using three
+						public datasets. During this evaluation, we not only verify known signatures but also identify new ones. Additionally, our system
+						achieves average recall and precision rate of 98-99% and 97-100%, respectively, highlighting both the effectiveness of our
+						approach and the feasibility of using packet-level signatures in detecting user activities of IoT devices.
+					</p>
+				</div>
+				<br/>
+				<div>
+					<h2>System Architecture</h2>
+					Our system includes four key system modules:
+						<ol>
+							<li>Feature extraction from IoT network traffic</li>
+							<li>Packet-based signature creation for IoT device activity</li>
+							<li>Signature validation</li>
+							<li>IoT device activity detection</li>
+						</ol>
+						<br/><img src="img/researches/r1/Overview-new.png" style="width: 60vw; min-width: 330px; border: 1px solid #9fbcbda2; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt="">
+					<br/>
+					<h3>Stage-1: Input</h3>
+					At first, we take a device’s event types & triggered events of that type as input. For convenience, 
+					we consider each event type as a decimal number.
+						<br/><img src="img/researches/r1/stage1.png" style="width: 10vw; border: 1px solid #9fbcbda2; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt="">
+					<br/>
+					<h3>Stage-2: Training</h3>
+					<i><b style="color: rgb(89, 89, 132);">Data Collection.</b></i>To collect a training set, we first start tcpdump on the router’s local interfaces
+					and start the script. Then, we terminate tcpdump after the n<sup>th</sup> event has been issued. <i><b style="color: rgb(89, 89, 132);">Trace Filtering.</b></i>TWe filter the collected raw training set (a
+					set of pcap files and event timestamps) to discard unrelated traffic. We discard the packets where neither the source nor
+					destination IP matches. Also, the packets beyond the number of packets n (a threshold described later on) after each
+					timestamped event are discarded. <i><b style="color: rgb(89, 89, 132);">Pair Clustering.</b></i> In this step, we separate relevant packet
+					pairs (i.e., those that consistently occur after an event) from irrelevant ones. Since we do not know in advance the packet
+					lengths in pairs, an unsupervised learning algorithm: DBSCAN (Density-based Spatial Clustering of Applications with Noise) is used.
+					
+					<i><b style="color: rgb(89, 89, 132);">Signature Creation.</b></i> Signatures in this paper are identified
+					based on only two parameters: packet-length and direction. To
+					create a signature, we concatenate packet pairs in the clusters
+					to reassemble the longest packet sequences possible. Packet
+					pairs in clusters x and y are concatenated if, and only if, for
+					each packet pair px in x, there exists a packet pair py in y
+					such that px and py occurred consecutively in the same TCP
+					connection. If there are more pairs in y than in x, the extra
+					pairs in y are discarded. Finally, this system sorts the sets of
+					packet sequences based on the total number of packets to form
+					a list of packet sequence sets.
+
+					<i><b style="color: rgb(89, 89, 132);">Signature Validation.</b></i>The validation of the signatures is
+					done by running the detection algorithm at layer-3 using the
+					dataset on which signatures are created. If the system detects
+					at most n events, and the timestamps of detected events match
+					the timestamps for events recorded during training, then the
+					signature is finalized as a valid packet-level signature.
+						<br/><br/><img src="img/researches/r1/stage2.png" style="width: 45vw; min-width: 330px; border: 1px solid #9fbcbda2; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
+					<i><b style="color: rgb(89, 89, 132);">Heuristics.</b></i> Heuristic is used in both signature generation and
+					validation. At first, we find out the number of packets, n<sub>i</sub>, of each triggered event for a specific time interval ‘t’, where
+					i = 1, 2, . . . , m (empirically we set, m = 100 and t = 15 milliseconds). Then, we calculate the geometric mean of all
+					the ni, which is the number of packets (n) we have considered
+					for our system. If events are triggered m times during training phase and
+					the number of packets for triggered events i = 1, 2, . . . , m are
+					n<sub>1</sub>1, n<sub>2</sub>, . . . , n<sub>m</sub>, respectively, then the number of packets to be
+					considered will be: <br/>
+						<br/><img src="img/researches/r1/heuristic_IoT.png" style="width: 11vw; min-width: 330px; border: 1px solid #9fbcbda2; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt="">
+					
+					<h3> Stage-3 (Activity Detection):</h3>Detection is done on independent datasets from which we did not generate signatures. We treat a network trace as a stream of packets. Each
+					individual packet is presented to a set of state machines.
+					A state machine is maintained for each packet sequence of the signature for each flow. A state
+					machine advances to its next state if the packet matches the
+					next packet in the modeled packet sequence. Heuristic is used here too.
+						<br/><br/><img src="img/researches/r1/stage3.png" style="width: 11vw; min-width: 330px; border: 1px solid #9fbcbda2; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt="">
+				</div>
+				<br/>
+				<div>
+					<h2>Dataset Used</h2>
+						<ol>
+							<li>Pingpong</li>
+							<li>UNSW</li>
+							<li>YourThings</li>
+							<li>Mon(IoT)r</li>
+						</ol>
+				</div>
+				<br/>
+				<div>
+					<h2>Examples of Signature</h2>
+					We identify signatures based on only two parameters: packet-length and direction. 
+					For the Sengled bulb, we do not observe any
+					pattern in its own communication. However, for ON events,
+					the controlling smartphone always sends a request packet of
+					length 211 bytes to an Internet host and receives a reply packet
+					of length 1063 bytes. For OFF, these packets are of the same
+					lengths. We observe an exchange of TLS Application Data
+					packets between the Amazon plug and an Internet host where
+					the packet lengths are 1099 bytes and 235 bytes when the plug
+					is ON. For OFF events, we find consistently occurring packet
+					pairs in the plug’s communication with two different Internet
+					hosts where the lengths of the reply packets are the same; but
+					for the requests packets, the lengths are different. Similarly, for
+					the TP-Link bulb, we observe that smartphone sends a request
+					packet to the device with the same lengths of packets for both
+					events, and the reply packets from the device are of lengths
+					227 bytes and 244 bytes for corresponding events. Thus, this
+					request-reply pattern can occur in the communication of any of
+					the three pairs: Phone-Device, Device-Cloud, or Phone-Cloud.
+						<br/><br/><img src="img/researches/r1/signatures.png" style="width: 45vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt="">				
+				</div>
+				<br/>
+				<div>
+					<h2>Results Summary</h2>
+					We have explored and designed how encrypted traffic from IoT devices can be
+					used to infer sensitive information, such as, events of those devices and sensors. Specifically, we
+					have implemented a methodology (a packet-based signature generation, validation and detection system) for automatically extracting packet-level signatures for smart home device events
+					from their network traffic. We have identified some new packet-level signatures that were not
+					previously known. Then, through experimental evaluations based on a wide range of different IoT devices from a real smart home environment, we have demonstrated that our system
+					is able to accurately unveil IoT device activities from raw network traffic logs with an average
+					recall of 98∼99% . Finally, we have evaluated the uniqueness of the generated signatures by
+					performing signature detection on different independent dataset and the results were much satisfactory. Through these efforts, we have demonstrated the effectiveness of our system to detect
+					user activities of IoT devices.
+						<br/><br/><img src="img/researches/r1/metrics.png" style="width: 9vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/><br/>
+					This research presents a system which is capable of detecting user activities of heterogeneous
+					IoT devices with the help of packet-level signatures extracted from both unencrypted and encrypted network traffic. Our system successfully overcomes some limitations of the existing
+					system as described previous chapters. However, IoT traffic analysis and user activity detection
+					is a vast area of research and different ideas are still needed to study and implement in this
+					sector. Our contribution of “packet-based signature generation & detection” can be combined
+					with these new ideas and we believe that it will increase the accuracy of any IoT user activity
+					detection system tremendously.
+				</div>
+				<br/>
+				<div>
+					<h2>Contributions</h2>
+					We introduce a packet-based signature generation process that does not consider a temporal threshold
+					and can efficiently handle both binary and multi-type events.
+					Our system overcomes these limitations as we experiment
+					with a diverse range of smart home devices and use only the
+					packet length and direction for a specific number of packets,
+					simplifying the detection technique and achieving higher recall
+					and precision rates. We make the following contributions:
+					<ul>
+						<li>To generate and detect packet-level signatures, we devise
+							a threshold on the number of packets to consider for
+							the signature rather than depending on a specific time
+							interval. As time-based signature generation and detection
+							can be easily manipulated by slowing down or speeding
+							up the traffic rate, existing works do not generalize well
+							across different datasets. Our proposed approach is less
+							prone to temporal fluctuations.</li>
+							<li>
+								To the best of our knowledge, we have obtained the
+								highest average recall and precision of 98−99% and
+								97−100%, respectively, for any packet-level signature
+								detection system to date. We will also open-source our
+								codebase.
+							</li>
+							<li>
+								Our automated signature generation process captures new
+								signatures from existing datasets, further verified through
+								cross-data validations. Thus, signatures can be generated
+								for both binary-type and multi-type events in an automated and systematic way without prior knowledge of the device’s behavior.
+							</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--================ End Features Area =================-->
+
+	<!--================Footer Area =================-->
+	<footer class="footer_area">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-12">
+					<div class="footer_top flex-column">
+						<div class="footer_logo">
+							<a href="#">
+								<img src="img/logo.png" alt="">
+							</a>
+							<h4>Follow Me</h4>
+						</div>
+						<!-- <div class="footer_social">
+							<a href="#"><i class="fa fa-facebook"></i></a>
+							<a href="#"><i class="fa fa-twitter"></i></a>
+							<a href="#"><i class="fa fa-dribbble"></i></a>
+							<a href="#"><i class="fa fa-behance"></i></a>
+						</div> -->
+						<div class="d-flex justify-content-center mb-4">
+							<a class="btn btn-light btn-social mr-2" style="background-color: rgb(186, 186, 199);" href="https://www.facebook.com/mohammadshamim.ahsan/"><i class="fab fa-facebook-f"></i></a>
+							<a class="btn btn-light btn-social mr-2" style="background-color: rgb(186, 186, 199);" href="http://linkedin.com/in/mohammad-shamim-ahsan"><i class="fab fa-linkedin-in"></i></a>
+							<a class="btn btn-light btn-social" style="background-color: rgb(186, 186, 199);" href="https://github.com/MdShamim097"><i class="fab fa-github"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row footer_bottom justify-content-center">
+				<p class="col-lg-8 col-sm-12 footer-text">
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		</div>
+	</footer>
+	<!--================End Footer Area =================-->
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/popper.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/stellar.js"></script>
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="vendors/nice-select/js/jquery.nice-select.min.js"></script>
+	<script src="vendors/isotope/imagesloaded.pkgd.min.js"></script>
+	<script src="vendors/isotope/isotope-min.js"></script>
+	<script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+	<script src="js/jquery.ajaxchimp.min.js"></script>
+	<script src="js/mail-script.js"></script>
+	<!--gmaps Js-->
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+	<script src="js/gmaps.min.js"></script>
+	<script src="js/theme.js"></script>
+
+	 <!-- Template Javascript
+	 <script src="js/main.js"></script> -->
+</body>
+
+</html>
