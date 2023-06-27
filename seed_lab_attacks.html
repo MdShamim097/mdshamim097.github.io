@@ -98,18 +98,18 @@
 				<br/>
 				<div id="csrf">
 					<h2>Cross-site Request Forgery(CSRF) Attack</h2>
-					<ul>
-						<li>Defintion</li>
+					<br/>
+						<h3>Defintion</h3>
 						<p>	CSRF stands for cross-site request forgery. Also known as session riding or XSRF. Forces an end user to execute unwanted actions on a web application in which he/she is currently authenticated.
 						</p>
-						<li>
+						<h3>
 							Workflow
-						</li>
+						</h3>
 						<p>
 							<br/><img src="img/assignments/seed_lab_attacks/csrf.png" style="width: 41vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
 							<i>Image source: https://www.imperva.com/learn/application-security/csrf-cross-site-request-forgery/</i>
 						</p>
-						<li>Task-1: Observing HTTP Request</li>
+						<h3>Task-1: Observing HTTP Request</h3>
 						<p>
 							<ul>
 								<li>How a legitimate HTTP request looks like and what parameters it uses, etc.</li>
@@ -117,95 +117,93 @@
 								<li>Identifying the parameters used in this these requests that we may need.</li>
 							</ul>
 						</p>
-						<li>Task-2: CSRF Attack using GET Request</li>
+						<h3>Task-2: CSRF Attack using GET Request</h3>
 						<p>
 							Samy wants to become a friend to Alice, but Alice refuses to add him to her Elgg friend list. Samy decides to use the CSRF attack to achieve his goal.
 							He sends Alice an URL (via an email or a posting in Elgg). Alice, curious about it, clicks on the URL, which leads her to Samy’s web site.
 							As soon as Alice visits the web page, Samy is added to the friend list of Alice.
 						</p>
-						<li>Task-3: CSRF Attack using POST Request</li>
+						<h3>Task-3: CSRF Attack using POST Request</h3>
 						<p>Samy wants Alice to say “Samy is my Hero” in her profile, so everybody knows about that.
 							Alice does not like Samy, let alone putting that statement in her profile.
 							Samy plans to use a CSRF attack to achieve that goal.							
 						</p>
-						<li>Task-4: Enabling Elgg’s Countermeasure</li>
+						<h3>Task-4: Enabling Elgg’s Countermeasure</h3>
 						<p>To defend against CSRF attacks, web applications can embed a secret token in their pages. All the requests coming from these pages must carry this token, or they will be considered as a cross-site request, and will not have the same privilege as the same-site requests. Attacker will not be able to get this secret token, so their requests are easily identified as cross-site requests. 
 							Elgg uses this secret-token approach as its built-in countermeasures to defend against CSRF attacks.
 							Task is to turn on the countermeasure.													
 						</p>
-						<li>
+						<h3>
 							Demonstration
-						</li>
+						</h3>
 						<a href="https://drive.google.com/file/d/14Q5kwEPFrSZTO6SuIK92sDjxtKcoW4sx/view?usp=sharing"><u style="color: blue;">Watch it on Google Drive!</u></a>
-					</ul>
 				</div>
 				<br/>
 				<div id="xss">
 					<h2>Cross-site Scripting(XSS) Attack</h2>
-					<ul>
-						<li>Defintion</li>
+					<br/>
+						<h3>Defintion</h3>
 						<p>XSS stands for Cross-site scripting. A computer security vulnerability typically found in web applications      
 							that enables malicious attackers to inject client side script into web pages viewed by other.
 							An attacker does not target a victim directly. Instead, an attacker would exploit a vulnerability within a website or web application that the victim would visit, 
 							essentially using the vulnerable website as a vehicle to deliver a malicious script to the victim’s browser.
 						</p>
-						<li>
+						<h3>
 							Workflow
-						</li>
+						</h3>
 						<p>
 							<br/><img src="img/assignments/seed_lab_attacks/xss.png" style="width: 41vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
 							<i>Image source: https://vitalflux.com/angular-prevent-xss-attacks-code-examples/</i>
 						</p>
-						<li>Task-1: Posting a Malicious Message to Display an Alert Window</li>
+						<h3>Task-1: Posting a Malicious Message to Display an Alert Window</h3>
 						<p>The objective of this task is to embed a JavaScript program in an Elgg profile, such that when another user views that profile, 
 							the JavaScript program will be executed and an alert window will be displayed.
 						</p>
-						<li>Task-2: Posting a Malicious Message to Display Cookies</li>
+						<h3>Task-2: Posting a Malicious Message to Display Cookies</h3>
 						<p>
 							The objective of this task is to embed a JavaScript program in an Elgg profile, such that when another user views that profile, the user’s cookies will be displayed in the alert window.
 						</p>
-						<li>Task-3: Stealing Cookies from the Victim’s Machine</li>
+						<h3>Task-3: Stealing Cookies from the Victim’s Machine</h3>
 						<p>
 							In the previous task, the malicious JavaScript code written by the attacker can print out the user’s cookies, but only the user can see the cookies, not the attacker.
 							In this task, the attacker wants the JavaScript code to send the cookies to himself/herself. 
 							To achieve this, the malicious JavaScript code needs to send an HTTP request to the attacker, with the cookies appended to the request.
 						</p>
-						<li>Task-4: Becoming the Victim’s Friend </li>
+						<h3>Task-4: Becoming the Victim’s Friend </h3>
 						<p>We have to write an XSS worm that adds Samy as a friend to any other user that visits Samy’s page. This worm does not self-propagate.
 							In this task, we need to write a malicious JavaScript program that forges HTTP requests directly from the victim’s browser, without the intervention of the attacker. The objective of the attack is to add Samy as a friend to the victim.																			
 						</p>
-						<li>Task-5: Modifying the Victim’s Profile</li>
+						<h3>Task-5: Modifying the Victim’s Profile</h3>
 						<p>The objective of this task is to modify the victim’s profile when the victim visits Samy’s page.
 							Specifically, modify the victim’s "About Me" field. We have to write an XSS worm to complete the task. This worm does not self-propagate.							
 						</p>
-						<li>
+						<h3>
 							Demonstration
-						</li>
+						</h3>
 						<a href="https://drive.google.com/file/d/1wOZ0ZTsdROTk1BC3VAbj8UxfbebhfYfX/view?usp=drive_link"><u style="color: blue;">Watch it on Google Drive!</u></a>
-					</ul>
 				</div>
 				<br/>
 				<div id="sql">
 					<h2>SQL Injection Attack
 					</h2>
-					<ul>
-						<li>Defintion</li>
+					<br/>
+						<h3>Defintion</h3>
 						<p>SQL injection is a code injection technique that exploits the vulnerabilities in the interface between web applications and database servers.
 						The vulnerability is present when user’s inputs are not correctly checked within the web applications before being sent to the back-end database servers	
 						</p>
-						<li>
+						<h3>
 							Workflow
-						</li>
+						</h3>
 						<p>
 							<br/><img src="img/assignments/seed_lab_attacks/sql.png" style="width: 27vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
 							<i>Image source: https://www.business2community.com/cybersecurity/sql-injection-attacks-sqli-web-based-application-security-part-4-02223254</i>
 						</p>
-						<li>Task-1: Get Familiar with SQL Statements</li>
+						<h3>Task-1: Get Familiar with SQL Statements</h3>
 						<p>The objective of this task is to get familiar with SQL commands by playing with the provided database.
 							Print out all the tables of the selected database.
 							Use a SQL command to print all the profile information of the employee Alice.							
 						</p>
-						<li>Task-2: SQL Injection Attack on SELECT Statement </li>
+						<h3>Task-2: SQL Injection Attack on SELECT Statement </h3>
 						<ul>
 							<li>Task 2.1: SQL Injection Attack from webpage.</li>
 							<p>Log into the web application as the administrator from the login page without knowing password.
@@ -221,8 +219,8 @@
 								There is a countermeasure preventing you from running two SQL statements in this attack.
 							</p>
 						</ul>
-						<li>Task-3: SQL Injection Attack on UPDATE Statement
-						</li>
+						<h3>Task-3: SQL Injection Attack on UPDATE Statement
+						</h3>
 						<p>
 							If a SQL injection vulnerability happens to an UPDATE statement, the damage will be more severe, because attackers can use the vulnerability to modify databases.
 						</p>
@@ -231,30 +229,26 @@
 							<li>Task 3.2: Modify other people’ salary</li>
 							<li>Task 3.3: Modify other people’ password.</li>
 						</ul>
-						<li>Task-4: Countermeasure — Prepared Statemen </li>
+						<h3>Task-4: Countermeasure — Prepared Statement </h3>
 						<p>Prepared statement comes into the picture after the compilation but before the execution step. 
 							A prepared statement will go through the compilation step, and be turned into a pre-compiled query with empty placeholders for data. 
 							To run this pre-compiled query, data need to be provided, but these data will not go through the compilation step; instead, they are plugged directly into the pre-compiled query, and are sent to the execution engine. 
 							Therefore, even if there is SQL code inside the data, without going through the compilation step, the code will be simply treated as part of data, without any special meaning. 
 							This is how prepared statement prevents SQL injection attacks.	
 						</p>
-						<li>
+						<h3>
 							Demonstration
-						</li>
+						</h3>
 						<a href="https://drive.google.com/file/d/149gN4xQ7UMI2wZIdD0Uvzv44KcRCBr_3/view?usp=drive_link"><u style="color: blue;">Watch it on Google Drive!</u></a>
-					</ul>
 				</div>
 				<br/>
 				<div id="morris">
 					<h2>Morris Worm Attack
 					</h2>
-					<ul>
-						<!-- <li>Defintion</li>
-						<p>
-						</p> -->
-						<li>
+					<br/>
+						<h3>
 							Assignment Setup
-						</li>
+						</h3>
 							<ol>
 								<li>At first, going to Labsetup/internet-nano folder.</li>
 								<li>Opening a terminal and use ‘dcbuild’ to build and 
@@ -276,8 +270,8 @@
 								command will flash.
 								<br/><img src="img/assignments/seed_lab_attacks/morris-1.png" style="width: 45vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
 
-								<li>Task 1: Attack Any Target 
-									Machine</li>
+						<h3>Task 1: Attack Any Target 
+									Machine</h3>
 						<p>In this task, we focus on the attacking part of the 
 							worm. For the sake of simplicity, we will only exploit 
 							the buffer-overflow vulnerability. To accomplish this:						
@@ -304,7 +298,7 @@
 								<br/><img src="img/assignments/seed_lab_attacks/morris-3.png" style="width: 27vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
 						</ol>
 
-						<li>Task 2: Self Duplication </li>
+						<h3>Task 2: Self Duplication </h3>
 						<p>
 							In this task, we need to transfer worm.py to the target 
 							machine at the time of Buffer Overflow attack. To 
@@ -330,8 +324,8 @@
 								created or not.</li>
 								<br/><img src="img/assignments/seed_lab_attacks/morris-6.png" style="width: 31vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
 						</ol>
-						<li>Task 3: Propagation
-						</li>
+						<h3>Task 3: Propagation
+						</h3>
 						<p>
 							In this task, we need to we need to make changes to 
 							worm.py so the worm can continue crawling after it 
@@ -365,9 +359,9 @@
 								</li>
 								<br/><img src="img/assignments/seed_lab_attacks/morris-11.png" style="width: 27vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
 						</ol>
-						<li>Task 4: Preventing Self 
+						<h3>Task 4: Preventing Self 
 							Infection
-							</li>
+						</h3>
 						<p>In this task, we need to we need to add such a checking 
 							mechanism to the worm code to ensure that one 
 							instance of the worm can run on a compromised 
@@ -397,7 +391,7 @@
 								</li>
 							<br/><img src="img/assignments/seed_lab_attacks/morris-14.png" style="width: 27vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
 						</ol>
-						<li>Visualization of attack in Map</li>
+						<h3>Visualization of attack in Map</h3>
 						<p>
 							As “ping 1.2.3.4” was given in the code, we can 
 							visualize the infected machines using “icmp and dst 
@@ -405,7 +399,6 @@
 							flashing in the map.
 						</p>
 						<br/><img src="img/assignments/seed_lab_attacks/morris-15.png" style="width: 45vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
-					</ul>
 				</div>
         </div>      
     </div>
@@ -469,5 +462,4 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	 <!-- Template Javascript
 	 <script src="js/main.js"></script> -->
 </body>
-
 </html>

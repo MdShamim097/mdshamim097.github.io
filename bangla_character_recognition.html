@@ -109,7 +109,7 @@
 						<li>Model-1: (Covolution=3, ReLU=3, MaxPool=1, Flatten=1, FC=1, Softmax=1)</li>
 						<p>Convolution -> ReLU -> MaxPool -> Convolution -> ReLU -> 
 							Convolution -> ReLU -> Flatten -> FC -> Softmax</p>
-						<li>Model-2:
+						<li>Model-2 (<b style="color: rgb(89, 89, 132);">LeNet</b>):
 							(Covolution=3, ReLU=5, MaxPool=2, Flatten=1, FC=3, Softmax=1)</li>
 							<p>
 								Convolution -> ReLU -> MaxPool -> Convolution -> ReLU -> 
@@ -241,7 +241,7 @@
 				</div>
 				<br/>
 				<div>
-					<h2>(Best) Chosen Model --- (Model-3):</h2>
+					<h2>Chosen (Best) Model --- (Model-3):</h2>
 					<h3>Configuration:</h3>
 					<ul>
 						<li>Convolution -> ReLU -> MaxPool -> Convolution -> ReLU ->
@@ -259,6 +259,17 @@
 						<li>Validation loss = 0.281%</li>
 						<li>Validation accuracy = 89.962%</li>
 						<li>Validation macro-f1 score = 0.889</li>
+					</ol>
+				</div>
+				<br/>
+				<div>
+					<h2>Test Results</h2>
+					<h3>Performance Metrics:</h3>
+					<ol>
+						<li>Test loss = 0.692%</li>
+						<li>Test accuracy = 77.851%</li>
+						<li>Test macro-f1 score = 0.781</li>
+						<br/><img src="img/assignments/bangla_character_recognition/cm_independent_test.png" style="width: 25vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/>
 					</ol>
 				</div>
         </div>      
@@ -323,5 +334,4 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 	 <!-- Template Javascript
 	 <script src="js/main.js"></script> -->
 </body>
-
 </html>
