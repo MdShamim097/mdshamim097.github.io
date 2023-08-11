@@ -84,7 +84,7 @@
 			<div class="row justify-content-center">
 				<div class="col-lg-8 text-center">
 					<div class="position-relative d-flex align-items-center justify-content-center" style="margin-bottom: 2cm;">
-						<h1 class="position-absolute text-uppercase" style="color: black;">Detecting User Activity from Encrypted IoT Traffic</h1>
+						<h1 class="position-absolute text-uppercase" style="color: black;">Detecting Smart Home Device Activities Using Packet-level Signatures from Encrypted Traffic</h1>
 					</div>
 				</div>
 			</div>
@@ -92,29 +92,41 @@
 				<div>
 					<h2>Abstract</h2>
 					<p>
-						Despite the significant benefits brought by the widespread adoption of smart home Internet of Things (IoT) devices, these devices are known to be vulnerable to both active
-						and passive attacks. Previous research has demonstrated the ability to infer the activities of these devices and sensors by
-						analyzing their network traffic. In this study, we introduce a packet-based signature that can identify specific events associated
-						with IoT devices by extracting various features from raw network traffic. Our approach addresses limitations in existing state of-the-art techniques, which rely on specific packet intervals.
-						Furthermore, we evaluate the effectiveness and uniqueness of our signatures by training and testing our system using three
-						public datasets. During this evaluation, we not only verify known signatures but also identify new ones. Additionally, our system
-						achieves average recall and precision rate of 98-99% and 97-100%, respectively, highlighting both the effectiveness of our
-						approach and the feasibility of using packet-level signatures in detecting user activities of IoT devices.
+						Despite the significant benefits of the widespread
+						adoption of smart home Internet of Things (IoT) devices, these
+						devices are known to be vulnerable to active and passive attacks.
+						Existing literature has demonstrated the ability to infer the
+						activities of these devices by analyzing their network traffic. In
+						this study, we introduce a packet-based signature generation and
+						detection system that can identify specific events associated with
+						IoT devices by extracting simple features from raw encrypted
+						network traffic. Our approach addresses limitations in existing
+						state-of-the-art techniques, which rely on specific packet intervals. 
+						Our proposed approach is not interval dependent rather, it
+						automatically identifies the specific threshold of packets to consider 
+						to generate a unique signature and, thus, is more resilient
+						to network jitters. Furthermore, we evaluate the effectiveness,
+						uniqueness, and correctness of our signatures by training and
+						testing our system using four public datasets. During this
+						evaluation, we not only verify known signatures but also identify
+						new ones. Additionally, our system achieves an average recall
+						and precision of 98-99% and 98-100%, respectively, highlighting
+						both the effectiveness of our approach and the feasibility of using
+						packet-level signatures in detecting user activities of IoT devices.
 					</p>
 				</div>
 				<br/>
 				<div>
 					<h2>System Architecture</h2>
-					Our system includes four key system modules:
-						<ol>
-							<li>Feature extraction from IoT network traffic</li>
-							<li>Packet-based signature creation for IoT device activity</li>
-							<li>Signature validation</li>
-							<li>IoT device activity detection</li>
+					Our system includes three key stages:			
+					<ol>
+							<li>Input processing</li>
+							<li>Training</li>
+							<li>Activity detection</li>
 						</ol>
 						<br/><img src="img/researches/r1/Overview-new.png" style="width: 60vw; min-width: 330px; border: 1px solid #9fbcbda2; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt="">
 					<br/>
-					<h3>Stage-1: Input</h3>
+					<h3>Stage-1: Input Processing</h3>
 					At first, we take a device’s event types & triggered events of that type as input. For convenience, 
 					we consider each event type as a decimal number.
 						<br/><img src="img/researches/r1/stage1.png" style="width: 10vw; border: 1px solid #9fbcbda2; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt="">
@@ -229,34 +241,34 @@
 				<br/>
 				<div>
 					<h2>Contributions</h2>
-					We introduce a packet-based signature generation process that does not consider a temporal threshold
-					and can efficiently handle both binary and multi-type events.
-					Our system overcomes these limitations as we experiment
-					with a diverse range of smart home devices and use only the
-					packet length and direction for a specific number of packets,
-					simplifying the detection technique and achieving higher recall
-					and precision rates. We make the following contributions:
+					We introduce a packet-based signature generation and detection system that does not consider a temporal
+					threshold and can efficiently handle both binary and multitype events. Our system overcomes these limitations as we
+					experiment with a diverse range of smart home devices and
+					use only the packet length and direction for a specific number
+					of packets, simplifying the detection technique and achieving
+					higher recall and precision rates. We make the following contributions:
 					<ul>
 						<li>To generate and detect packet-level signatures, we devise
 							a threshold on the number of packets to consider for
 							the signature rather than depending on a specific time
 							interval. As time-based signature generation and detection
 							can be easily manipulated by slowing down or speeding
-							up the traffic rate, existing works do not generalize well
-							across different datasets. Our proposed approach is less
-							prone to temporal fluctuations.</li>
+							up the traffic rate, existing works are less effective across
+							different datasets. Our proposed approach is less prone
+							to temporal fluctuations caused by network jitters.</li>
 							<li>
 								To the best of our knowledge, we have obtained the
 								highest average recall and precision of 98−99% and
-								97−100%, respectively, for any packet-level signature
+								98−100%, respectively, for any packet-level signature
 								detection system to date. We will also open-source our
-								codebase.
+								codebase for the research community.
 							</li>
 							<li>
-								Our automated signature generation process captures new
-								signatures from existing datasets, further verified through
+								Our automated signature generation process captures <i>new
+								signatures</i> from existing datasets, further verified through
 								cross-data validations. Thus, signatures can be generated
-								for both binary-type and multi-type events in an automated and systematic way without prior knowledge of the device’s behavior.
+								for both binary-type and multi-type events in an automated and systematic way without prior knowledge of
+								the device’s behavior.
 							</li>
 					</ul>
 				</div>
