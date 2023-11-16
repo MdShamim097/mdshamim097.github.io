@@ -89,8 +89,28 @@
 				</div>
 			</div>
 			<div class="row feature_inner">
+				<div>
+					<h2>Abstract</h2>
+					<p>
+						The Double Coverage (DC) algorithm is very well-known for the online <i>k</i>-server problem on a line
+						that has a competitive ratio <i>k</i>. In this paper, we introduce randomization in the DC algorithm
+						on a line and propose two randomized algorithms RAND and SEMI-RAND. We show that the
+						probabilities of RAND and SEMI-RAND of being <i>k</i>-competitive are 1/2
+						and 5/6 , respectively. It is
+						known that the competitive ratio of any randomized algorithm for the online k-server problem
+						is at least <i>k</i> (Motwani & Raghavan, pp. 368–391, 1995) and hence our algorithm matches the
+						lower bound. Apart from competitive analysis, we perform a cost comparison between the original
+						DC-Line algorithm and our algorithms. Our results and analysis prove that RAND takes less cost
+						except for one case and SEMI-RAND always requires less cost than the original DC-Line algorithm
+						which shows the power of randomization in an online algorithm working against an adaptive online
+						adversary. Using that cost analysis we show that SEMI-RAND is no worse than DC-Line in terms
+						of competitive ratio.
+
+					</p>
+				</div>
+				<br/>
                 <div>
-                    <h2>Objective</h2>
+                    <h2>Problem Statement</h2>
                     In the online <i>k</i>-server problem there is a set of <i>k</i> servers, represented as points in a metric space, to
                     handle requests that are also in the form of points in the space and appear one after another. For each request,
                     the algorithm must determine which server to move to the requested point. If the servers and the requests lie on
@@ -111,13 +131,38 @@
                     choose one arbitrarily). When the request falls outside the “convex hull" of the k servers,
                     only the closest server moves to it.
                 </div>
+				<br/>
+                <div>
+                    <h2>Our Contributions</h2>
+                    In this paper, we have worked on the randomization in the Double Coverage Algorithm on
+                    a line (DC-Line) for the online <i>k</i>-server problem. As no work has been done before on the
+                    power of randomization in the DC-Line algorithm, our work makes an important contribution
+                    to this problem. We develop two randomized variants of the DC-Line algorithm which are
+                    proved as <i>k</i>-competitive with probability 1/2 and 5/6. According to <i>Lemma1</i>, our results match
+                    with the known lower bound on competitive ratio with probabilities mentioned below. To
+                    the best of our knowledge, among the recent works of randomized algorithms for the online
+                    <i>k</i>-server problem on a line, the algorithm provided by Csaba and Lodha gives super-linear
+                    bound for n with o(<i>k</i>)–competitiveness for the first time. But their algorithm works against
+                    “oblivious adversary” which is weaker than “adaptive online adversary” against which we have worked on. <br/>
+                    <p>
+					<b style="color: rgba(0, 0, 0, 0.774);">Lemma1:
+                        Let R be a randomized online algorithm that manages k servers in any
+                        metric space. Then C<sup style="color: rgba(0, 0, 0, 0.774);">aon</sup> <sub style="color: rgba(0, 0, 0, 0.774);">R</sub> ≥ k, where 
+                        C<sup style="color: rgba(0, 0, 0, 0.774);">aon</sup> <sub style="color: rgba(0, 0, 0, 0.774);">R</sub> 
+                        is the competitive ratio of that randomized
+                        algorithm that moves against any adaptive online adversary.
+                    </b>
+					</p>
+                </div>
                 <br/>
                 <div>
                     <h2>Methodology</h2>
-                    We develop two randomized variants of the Double Coverage (DC)-Line algorithm: RAND &
+                    We develop two randomized variants of the Double Coverage (DC)-Line algorithm: RAND and
                     SEMI-RAND. 
+					<br/>
+					<br/>
                     <div>
-                        <h3><i>RAND</i></h3>
+                        <h3>Algorithm <i>RAND</i></h3>
                         If the current request lies outside the convex hull of the current locations of the servers, RAND
                         serves it with the nearest server.
                         <br/><img src="img/researches/r2/img-1.png" style="width: 45vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" alt=""> <br/>
@@ -125,7 +170,9 @@
                         the request.
                         <br/><img src="img/researches/r2/img-2.png" style="width: 45vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" alt=""> <br/>
                     </div>
-                    <h3><i>SEMI-RAND</i></h3>
+					<br/>
+					<br/>
+                    <h3>Algorithm <i>SEMI-RAND</i></h3>
                     SEMI-RAND works more efficiently. Initially, we keep two splitters for each pair of adjacent servers between
                     their paths. If the current request lies outside the convex hull of the current locations of the servers, serve it with the nearest
                     one. Otherwise, 
@@ -147,8 +194,18 @@
                         </ol>
                 </div>
                 <br/>
+				<br/>
+				<div>
+					<h2>Theorems</h2><br/>
+					<ul>
+						<li><h3><i><b style="color: rgb(89, 89, 132);">Theorem-2: </b></i>RAND is <i>k</i>-competitive with probability 1/2</h3></li>
+						<li><h3><i><b style="color: rgb(89, 89, 132);">Theorem-3: </b> </i>SEMI-RAND is <i>k</i>-competitive with probability 5/6</h3></li>
+						<li><h3><i><b style="color: rgb(89, 89, 132);">Theorem-4: </b></i>The competitive ratio of <i>SEMI-RAND</i> is no more than the competitive ratio of DC-Line</h3></li>
+					</ul>
+				</div>
+				<br/><br/><br/>
                 <div>
-                    <h2>Results Summary</h2>
+                    <h2>Conclusion</h2>
                     We show that the probabilities of RAND and SEMI-RAND of being <i>k</i>-competitive are 1/2 and 5/6,
                     respectively using interleaving move style. It is known that the competitive ratio of any randomized algorithm
                     for the online <i>k</i>-server problem is at least <i>k</i> (Motwani & Raghavan, pp. 368–391, 1995) and hence our algorithm
@@ -157,29 +214,6 @@
                     case and SEMI-RAND always requires less cost than the original DC-Line algorithm which shows the power of
                     randomization in an online algorithm working against an adaptive online adversary. Using that cost analysis we
                     show that SEMI-RAND is no worse than DC-Line in terms of competitive ratio.
-                </div>
-                <br/>
-                <div>
-                    <h2>Contributions</h2>
-                    In this paper, we have worked on the randomization in the Double Coverage Algorithm on
-                    a line (DC-Line) for the online <i>k</i>-server problem. As no work has been done before on the
-                    power of randomization in the DC-Line algorithm, our work makes an important contribution
-                    to this problem. We develop two randomized variants of the DC-Line algorithm which are
-                    proved as <i>k</i>-competitive with probability 1/2 and 5/6. According to <i>Lemma1</i>, our results match
-                    with the known lower bound on competitive ratio with probabilities mentioned below. To
-                    the best of our knowledge, among the recent works of randomized algorithms for the online
-                    <i>k</i>-server problem on a line, the algorithm provided by Csaba and Lodha gives super-linear
-                    bound for n with o(<i>k</i>)–competitiveness for the first time. But their algorithm works against
-                    “oblivious adversary” which is weaker than “adaptive online adversary” against which we have worked on. <br/>
-                    <p>
-					<b style="color: rgba(0, 0, 0, 0.774);">Lemma1:
-                        Let R be a randomized online algorithm that manages k servers in any
-                        metric space. Then C<sup style="color: rgba(0, 0, 0, 0.774);">aon</sup> R ≥ k, where 
-                        C<sup style="color: rgba(0, 0, 0, 0.774);">aon</sup> <sub style="color: rgba(0, 0, 0, 0.774);">R</sub> 
-                        is the competitive ratio of that randomized
-                        algorithm that moves against any adaptive online adversary.
-                    </b>
-					</p>
                 </div>
 			</div>
 		</div>

@@ -115,7 +115,61 @@
 						packet-level signatures in detecting user activities of IoT devices.
 					</p>
 				</div>
+				<br/><br/><br/><br/><br/>
+				<div>
+					<h2>Research Questions</h2>
+					<ul>
+						<li><b style="color: rgb(89, 89, 132);">RQ1:</b> Can we develop a time-independent activity detection system?</li>
+						<li><b style="color: rgb(89, 89, 132);">RQ2:</b> How can we generate packet-level signatures
+							for devices with multi-type events without prior knowledge
+							about a device’s behavior?</li>
+						<li><b style="color: rgb(89, 89, 132);">RQ3:</b>
+							How well do the generated signature(s) of a specific device
+							maintain uniqueness and correctness across independent
+							datasets?</li>
+					</ul>
+				</div>
 				<br/>
+				<div>
+					<h2>Contributions</h2>
+					We introduce a packet-based signature generation and detection system that does not consider a temporal
+					threshold and can efficiently handle both binary and multitype events. Our system overcomes these limitations as we
+					experiment with a diverse range of smart home devices and
+					use only the packet length and direction for a specific number
+					of packets, simplifying the detection technique and achieving
+					higher recall and precision rates. We make the following contributions:
+					<ul>
+						<li>To generate and detect packet-level signatures, we devise
+							a threshold on the number of packets to consider for
+							the signature rather than depending on a specific time
+							interval. As time-based signature generation and detection
+							can be easily manipulated by slowing down or speeding
+							up the traffic rate, existing works are less effective across
+							different datasets. Our proposed approach is less prone
+							to temporal fluctuations caused by network jitters.</li>
+							<li>
+								To the best of our knowledge, we have obtained the
+								highest average recall and precision of 98−99% and
+								98−100%, respectively, for any packet-level signature
+								detection system to date. We will also open-source our
+								codebase for the research community.
+							</li>
+							<li>
+								Our automated signature generation process captures <i>new
+								signatures</i> from existing datasets, further verified through
+								cross-data validations. Thus, signatures can be generated
+								for both binary-type and multi-type events in an automated and systematic way without prior knowledge of
+								the device’s behavior.
+							</li>
+					</ul>
+				</div>
+				<br/><br/><br/><br/><br/>
+				<div>
+					<h2>Comparison with exisitng works</h2>
+					<br/><br/><img src="img/researches/r1/comp-1.png" style="width: 65vw; min-width: 330px; border: 1px solid #9fbcbda2; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt="">
+					<br/>
+				</div>
+				<br/><br/><br/><br/><br/>
 				<div>
 					<h2>System Architecture</h2>
 					Our system includes three key stages:			
@@ -135,7 +189,7 @@
 					<p><i><b style="color: rgb(89, 89, 132);">Data Collection.</b></i>To collect a training set, we first start tcpdump on the router’s local interfaces
 					and start the script. Then, we terminate tcpdump after the n<sup style="color: rgb(89, 89, 132);">th</sup> event has been issued. 
 					</p>
-					<p><i><b style="color: rgb(89, 89, 132);">Trace Filtering.</b></i>TWe filter the collected raw training set (a
+					<p><i><b style="color: rgb(89, 89, 132);">Trace Filtering.</b></i> We filter the collected raw training set (a
 					set of pcap files and event timestamps) to discard unrelated traffic. We discard the packets where neither the source nor
 					destination IP matches. Also, the packets beyond the number of packets <i>n</i> (a threshold described later on) after each
 					timestamped event are discarded.
@@ -172,7 +226,7 @@
 					the ni, which is the number of packets (n) we have considered
 					for our system. If events are triggered m times during training phase and
 					the number of packets for triggered events i = 1, 2, . . . , m are
-					n<sub style="color: rgb(89, 89, 132);">1</sub>1, n<sub style="color: rgb(89, 89, 132);">2</sub>, . . . , n<sub style="color: rgb(89, 89, 132);">m</sub>, respectively, then the number of packets to be
+					n<sub style="color: rgb(89, 89, 132);">1</sub>, n<sub style="color: rgb(89, 89, 132);">2</sub>, . . . , n<sub style="color: rgb(89, 89, 132);">m</sub>, respectively, then the number of packets to be
 					considered will be: <br/>
 						<br/><img src="img/researches/r1/heuristic_IoT.png" style="width: 7vw; min-width: 230px; border: 1px solid #9fbcbda2; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt="">
 					
@@ -182,16 +236,44 @@
 					machine advances to its next state if the packet matches the
 					next packet in the modeled packet sequence. Heuristic is used here too.
 						<br/><br/><img src="img/researches/r1/stage3.png" style="width: 11vw; min-width: 330px; border: 1px solid #9fbcbda2; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt="">
+					<br/>
+					<p>
+						<i><b style="color: rgb(89, 89, 132);">Signature Matching.</b></i>
+						There are two signature matching
+						strategies: exact matching and range-based or relaxed matching. In exact matching, only the packets whose lengths exactly
+						match the packet lengths that were observed during training
+						are considered to be valid. On the other hand, in range-based
+						matching, the packet lengths are allowed to lie between a
+						minimum and maximum packet length (i.e., within a small
+						delta, ϵ) observed during training. We set ϵ = 10 as existing
+						work. Now, if the signatures during training are <C-136,
+						S-780> and <C-700, S-511>, the range-based matching will
+						consider client-to-server packets with lengths in [126, 710] and
+						server-to-client packets with lengths in [501, 790] as valid. We
+						used exact matching when no variations in packet lengths were
+						observed during training, otherwise, range-based matching is
+						used. A signature match is searched within n packets.
+					</p>
 				</div>
 				<br/>
-				<div>
+				<!-- <div>
 					<h2>Dataset Used</h2>
-						<ol>
-							<li>Pingpong</li>
-							<li>UNSW</li>
-							<li>YourThings</li>
-							<li>Mon(IoT)r</li>
-						</ol>
+					<ol>
+						<li>Pingpong</li>
+						<li>UNSW</li>
+						<li>YourThings</li>
+						<li>Mon(IoT)r</li>
+					</ol>
+					<br/>
+				</div> -->
+				<br/>
+				<div>
+					<h2>Algoroithms</h2>
+					&emsp;&emsp;&emsp;&emsp;&emsp;
+					<img src="img/researches/r1/alg-1.png" style="width: 27vw; min-width: 330px; " class="rounded" alt="">
+					&emsp;&emsp;&emsp;&emsp;&emsp;
+					<img src="img/researches/r1/alg-2.png" style="width: 25vw; min-width: 330px; " class="rounded" alt=""><br/>
+
 				</div>
 				<br/>
 				<div>
@@ -219,58 +301,83 @@
 				</div>
 				<br/>
 				<div>
-					<h2>Results Summary</h2>
-					We have explored and designed how encrypted traffic from IoT devices can be
-					used to infer sensitive information, such as, events of those devices and sensors. Specifically, we
-					have implemented a methodology (a packet-based signature generation, validation and detection system) for automatically extracting packet-level signatures for smart home device events
-					from their network traffic. We have identified some new packet-level signatures that were not
-					previously known. Then, through experimental evaluations based on a wide range of different IoT devices from a real smart home environment, we have demonstrated that our system
-					is able to accurately unveil IoT device activities from raw network traffic logs with an average
-					recall of 98∼99% . Finally, we have evaluated the uniqueness of the generated signatures by
-					performing signature detection on different independent dataset and the results were much satisfactory. Through these efforts, we have demonstrated the effectiveness of our system to detect
-					user activities of IoT devices.
-						<br/><br/><img src="img/researches/r1/metrics.png" style="width: 9vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/><br/>
-					This research presents a system which is capable of detecting user activities of heterogeneous
-					IoT devices with the help of packet-level signatures extracted from both unencrypted and encrypted network traffic. Our system successfully overcomes some limitations of the existing
-					system as described previous chapters. However, IoT traffic analysis and user activity detection
-					is a vast area of research and different ideas are still needed to study and implement in this
-					sector. Our contribution of “packet-based signature generation & detection” can be combined
-					with these new ideas and we believe that it will increase the accuracy of any IoT user activity
-					detection system tremendously.
+					<h2>Evaluation</h2>
+					<ul>
+						<li style="font-size: x-large;"><h3>Results using the PINGPONG dataset</h3></li>
+						<br/><br/><img src="img/researches/r1/res-1.png" style="width: 50vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/><br/>
+						<br/><br/><img src="img/researches/r1/res-2.png" style="width: 45vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/><br/>
+						<br/><br/><img src="img/researches/r1/res-3.png" style="width: 50vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/><br/>
+						<br/><br/><img src="img/researches/r1/res-4.png" style="width: 30vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/><br/>
+						<h4>Takeaway</h4>
+							<p>
+								PINGPONG employs a timestamp-based signature generation and detection strategy, considering all packets 
+								within a specific time interval. However, this approach’s
+								drawback lies in its sensitivity to traffic rate fluctuations,
+								leading to variations in validation and detection phases. This
+								is especially problematic during network congestion, as fewer
+								packets may be available for signature detection in such
+							</p>
+						<li style="font-size: x-large;"><h3>Negative Control Experiments using the UNSW and YourThings datasets</h3></li>
+						<br/><br/><img src="img/researches/r1/res-5.png" style="width: 30vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/><br/>
+						<br/><br/><img src="img/researches/r1/res-6.png" style="width: 30vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/><br/>
+						<h4>Takeaway</h4>
+							<p>
+								In the two negative control experiments, we observe an average of 1 false positive per 0.117 million packets in
+								the UNSW dataset and an average of 1 false positive per 1.09
+								million packets in the YourThings dataset. These false positives
+								occur due to the range-based or relaxed matching strategy
+								employed by our system. This strategy considers a match even
+								if the packet lengths in independent traffic are close to the
+								exact lengths observed during training.
+							</p>
+					<li  style="font-size: x-large;"><h3>Positive Control Experiment using Mon(IoT)r Dataset</h3></li>
+					<br/><br/><img src="img/researches/r1/res-7.png" style="width: 45vw; min-width: 330px; margin-left: auto; margin-right: auto; display: block; margin-left: auto; margin-right: auto; display: block;" class="rounded" alt=""><br/><br/>
+					<h4>Takeaway</h4>
+							<p>
+								We observed in the positive control experiment
+								that some signatures change over time, probably due to the
+								changes in configuration, communication protocol introduced
+								in firmware updates, or other credentials. This evolution can
+								result in introducing false negative events as the signatures will
+								not be matched the ones that were observed during training.
+								To overcome this situation, we need to update our signatures
+								periodically. The best thing is to repeat the training process to
+								extract the latest signatures of a device right before launching
+								the detection process.
+							</p>
+					</ul>
 				</div>
 				<br/>
 				<div>
-					<h2>Contributions</h2>
-					We introduce a packet-based signature generation and detection system that does not consider a temporal
-					threshold and can efficiently handle both binary and multitype events. Our system overcomes these limitations as we
-					experiment with a diverse range of smart home devices and
-					use only the packet length and direction for a specific number
-					of packets, simplifying the detection technique and achieving
-					higher recall and precision rates. We make the following contributions:
-					<ul>
-						<li>To generate and detect packet-level signatures, we devise
-							a threshold on the number of packets to consider for
-							the signature rather than depending on a specific time
-							interval. As time-based signature generation and detection
-							can be easily manipulated by slowing down or speeding
-							up the traffic rate, existing works are less effective across
-							different datasets. Our proposed approach is less prone
-							to temporal fluctuations caused by network jitters.</li>
-							<li>
-								To the best of our knowledge, we have obtained the
-								highest average recall and precision of 98−99% and
-								98−100%, respectively, for any packet-level signature
-								detection system to date. We will also open-source our
-								codebase for the research community.
-							</li>
-							<li>
-								Our automated signature generation process captures <i>new
-								signatures</i> from existing datasets, further verified through
-								cross-data validations. Thus, signatures can be generated
-								for both binary-type and multi-type events in an automated and systematic way without prior knowledge of
-								the device’s behavior.
-							</li>
-					</ul>
+					<h2>Discussion</h2>
+					Our system demonstrates high accuracy in revealing IoT
+					device activities from real smart home network traffic logs.
+					The experimental evaluations, covering a diverse range of
+					IoT devices, show an average recall of 98-99% and average
+					precision of 98-100%. We identify new packet-level signatures
+					and validate their uniqueness by performing detection on
+					independent datasets, resulting in negligible false positives.
+					Furthermore, the generated signatures exhibit good generalizability within the same time frame, although firmware updates
+					can impact the final signature.
+					Our system has a few limitations. First, the proposed
+					methodology is only be applied to TCP protocol. Many devices
+					use UDP protocol for communication, which we plan to
+					explore in the future. Second, the packet-padding technique
+					will affect our detection process as it obfuscates individual
+					packet lengths; however, it comes with a significant overhead.
+					Lastly, we observed a few false positives as a side effect of
+					reducing false-negatives while maximizing true positives.
+				</div>
+				<br/>
+				<div>
+					<h2>Conclusion</h2>
+					This paper introduces a packet-based signature generation
+					and detection system for effectively detecting user activities of
+					diverse IoT devices, encompassing single, binary, and multitype events, using packet-level signatures extracted from both
+					encrypted and unencrypted network traffic. By overcoming the
+					time-dependency limitations of existing systems, we demonstrate the system’s superiority through experimental results.
+					The uniqueness and accuracy of our generated signatures are
+					validated using publicly available datasets, yielding satisfactory outcomes.
 				</div>
 			</div>
 		</div>
